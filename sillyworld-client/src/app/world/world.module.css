@@ -1,0 +1,351 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.languageSwitcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: var(--font-montserrat);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.languageSwitcher:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+}
+
+.mapBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.mapImage {
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.dynamicOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+  animation: pulse 8s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.title {
+  font-family: var(--font-venite-adoremus);
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gameBoxes {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 200px);
+}
+
+.gameBox {
+  position: absolute;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -55%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.gameBoxInner {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gameBoxInner:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.gameName {
+  font-family: var(--font-venite-adoremus);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ff8e53;
+}
+
+.gameIntro {
+  font-family: var(--font-inter);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.gameButton {
+  font-family: var(--font-montserrat);
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, #ff6b6b, #ff8e53);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.gameButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.backButton {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-montserrat);
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.backButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateX(-50%) translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .gameBox {
+    width: 250px;
+  }
+  
+  .gameName {
+    font-size: 1.5rem;
+  }
+  
+  .gameIntro {
+    font-size: 0.8rem;
+  }
+}
+
+/* Add styles for the title with Chinese text */
+.titleChinese {
+  font-size: 0.7em;
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+/* Add a subtitle style */
+.subtitle {
+  font-family: var(--font-montserrat);
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Add these styles for flying lines and location markers */
+
+.flyingLine {
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(255, 142, 83, 0.8), rgba(255, 142, 83, 0.2));
+  z-index: 3;
+  animation: pulseLine 2s infinite alternate;
+}
+
+.flyingDot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ff8e53;
+  border-radius: 50%;
+  bottom: 0;
+  left: -3px;
+  animation: moveDot 3s infinite;
+}
+
+.locationMarker {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #ff8e53;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 4px rgba(255, 142, 83, 0.3);
+  z-index: 3;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulseLine {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveDot {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 142, 83, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 142, 83, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 142, 83, 0);
+  }
+}
+
+/* Remove the gameIcon styles since we're not using them anymore */
+.gameIcon {
+  display: none;
+}
+
+/* Add these styles for the location names */
+.buttonContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.locationName {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-montserrat);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Update styles for game location and entry cost */
+.gameLocation {
+  font-family: var(--font-montserrat);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.entryCost {
+  font-family: var(--font-montserrat);
+  font-size: 0.9rem;
+  color: #ff8e53;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Remove the buttonContainer and locationName styles since we're not using them anymore */
+.buttonContainer, .locationName {
+  display: none;
+}
+
+/* Add style for coming soon text */
+.comingSoon {
+  font-family: var(--font-montserrat);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5rem;
+} 
