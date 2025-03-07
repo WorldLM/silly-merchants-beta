@@ -1,7 +1,20 @@
-import localFont from 'next/font/local'
 import { Inter, Montserrat } from 'next/font/google'
+import localFont from 'next/font/local'
 
-// Load the Venite Adoremus font for titles
+// Google fonts
+export const inter = Inter({ 
+  subsets: ['latin'], 
+  variable: '--font-inter',
+  display: 'swap'
+})
+
+export const montserrat = Montserrat({ 
+  subsets: ['latin'], 
+  variable: '--font-montserrat',
+  display: 'swap'
+})
+
+// Local fonts - using the correct file paths
 export const veniteAdoremus = localFont({
   src: [
     {
@@ -17,18 +30,4 @@ export const veniteAdoremus = localFont({
   ],
   display: 'swap',
   variable: '--font-venite-adoremus',
-})
-
-// Load Montserrat for subtitles
-export const montserrat = Montserrat({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-montserrat',
-})
-
-// Load Inter for general text
-export const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
 }) 

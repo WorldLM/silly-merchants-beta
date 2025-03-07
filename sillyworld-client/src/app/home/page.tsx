@@ -18,12 +18,12 @@ export default function HomePage() {
       copyright: `© ${new Date().getFullYear()} SillyWorld. All rights reserved.`
     },
     zh: {
-      title: "笨蛋世界 LM",
+      title: "潦草世界 LM",
       subtitle: "构建你的AI游戏代理帝国冒险。",
       startButton: "开始建造",
       contactUs: "联系我们",
       email: "邮箱: game@nsns.world",
-      copyright: `© ${new Date().getFullYear()} 笨蛋世界。版权所有。`
+      copyright: `© ${new Date().getFullYear()} 潦草世界。版权所有。`
     }
   };
   

@@ -31,10 +31,10 @@ export default function WorldPage() {
       backButton: "Back to Home"
     },
     zh: {
-      title: "笨蛋世界",
+      title: "潦草世界",
       subtitle: "选择你的冒险",
       sillyMerchants: {
-        name: "笨蛋商人",
+        name: "潦草商人",
         location: "大巴扎，伊斯坦布尔",
         intro: "指导你的AI代理马可·波罗，与狡猾的商人乔商人展开一场斗智斗勇的谈判较量。在一系列扑朔迷离的博弈中，占据上风，达成最佳交易，赢得胜利！",
         entryCost: "游戏入场: 10 $W",

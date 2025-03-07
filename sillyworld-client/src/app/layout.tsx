@@ -1,10 +1,17 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
-import { veniteAdoremus, montserrat, inter } from './fonts'
+import { inter, montserrat, veniteAdoremus } from './fonts'
 
 export const metadata: Metadata = {
   title: 'SillyWorld',
-  description: 'Build your agent game empire ventures',
+  description: 'Build your AI game agentic empire ventures.',
+}
+
+// Separate viewport export as recommended by Next.js 14
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 }
 
 export default function RootLayout({
@@ -13,8 +20,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${veniteAdoremus.variable} ${montserrat.variable} ${inter.variable}`}>
-      <body className={inter.className}>{children}</body>
+    <html lang="en">
+      <body className={`${inter.variable} ${montserrat.variable} ${veniteAdoremus.variable}`}>
+        {children}
+      </body>
     </html>
   )
 }

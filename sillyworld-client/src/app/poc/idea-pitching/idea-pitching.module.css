@@ -1,0 +1,1402 @@
+/* Import custom fonts */
+@font-face {
+  font-family: 'Venite Adoremus';
+  src: url('/fonts/venite-adoremus-font/VeniteAdoremusStraight-Yzo6v.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Container */
+.container {
+  min-height: 100vh;
+  background-color: #0f1114;
+  color: white;
+  padding: 2rem;
+  font-family: var(--font-inter);
+  position: relative;
+  background-image: linear-gradient(rgba(15, 17, 20, 0.75), rgba(15, 17, 20, 0.85)), url('/images/pitch_interview_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Language Switcher */
+.languageSwitcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.languageSwitcher:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: 'Venite Adoremus', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #8a2be2, #4169e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 10px rgba(106, 17, 203, 0.3);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #d1d5db;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(20, 20, 30, 0.8);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Welcome Stage */
+.welcomeStage h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #6a11cb;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.processContainer {
+  background: rgba(30, 30, 40, 0.7);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.processTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #2575fc;
+}
+
+.processList {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.processList li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+.processList li::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: #2575fc;
+  border-radius: 50%;
+}
+
+.actionButton {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: block;
+  margin: 2rem auto 1rem;
+}
+
+.actionButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(106, 17, 203, 0.3);
+}
+
+.actionButton:disabled {
+  background: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Coaching Stage */
+.coachingStage {
+  background-image: linear-gradient(rgba(15, 17, 20, 0.75), rgba(15, 17, 20, 0.85)), url('/images/pitch_coaching_bg.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+}
+
+.coachingStage h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #6a11cb;
+  text-align: center;
+}
+
+.questionContainer {
+  background: rgba(30, 30, 40, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.questionText {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #4169e1;
+  text-align: center;
+}
+
+.inputField {
+  width: 100%;
+  background: rgba(20, 20, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 120px;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #2575fc;
+  box-shadow: 0 0 0 2px rgba(37, 117, 252, 0.2);
+}
+
+.inputActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.sampleButton {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sampleButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+}
+
+.followUp {
+  background: rgba(106, 17, 203, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-left: 3px solid #6a11cb;
+}
+
+.followUpText {
+  font-style: italic;
+  color: #d1d5db;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.navButton {
+  background: rgba(30, 30, 40, 0.7);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navButton:hover:not(:disabled) {
+  background: rgba(37, 117, 252, 0.2);
+  transform: translateY(-2px);
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.skipButton {
+  background: transparent;
+  color: #a0aec0;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 1rem auto;
+  display: block;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.skipButton:hover {
+  color: #2575fc;
+}
+
+/* Demo Day Stage */
+.demoDayStage h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #6a11cb;
+  text-align: center;
+}
+
+.countdownContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(106, 17, 203, 0.2), rgba(37, 117, 252, 0.2));
+}
+
+.countdownNumber {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #2575fc;
+  animation: pulse 1s infinite;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(37, 117, 252, 0.5);
+}
+
+.pitchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(30, 30, 40, 0.7);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pitchContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/pitch_interview_bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.alexAvatar {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.alexAvatar::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+
+.pitchContent {
+  width: 100%;
+  max-width: 700px;
+}
+
+.pitchText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+.pitchText::before, .pitchText::after {
+  content: '"';
+  font-size: 3rem;
+  color: rgba(106, 17, 203, 0.3);
+  position: absolute;
+}
+
+.pitchText::before {
+  top: -20px;
+  left: 0;
+}
+
+.pitchText::after {
+  bottom: -40px;
+  right: 0;
+}
+
+/* QA Stage */
+.qaStage h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #6a11cb;
+  text-align: center;
+}
+
+.judgeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(30, 30, 40, 0.7);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.judgeSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/pitch_interview_bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.judgeAvatar {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.questionContainer {
+  width: 100%;
+  max-width: 700px;
+}
+
+.questionLabel {
+  font-size: 1.2rem;
+  color: #2575fc;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.questionText {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #4169e1;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(20, 20, 30, 0.5);
+  border-radius: 8px;
+  border-left: 3px solid #2575fc;
+}
+
+.thinkingIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.thinkingIndicator p {
+  margin-top: 0.5rem;
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.thinkingDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #2575fc;
+  border-radius: 50%;
+  animation: thinking 1.4s infinite ease-in-out both;
+}
+
+.thinkingDot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.thinkingDot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.answerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(106, 17, 203, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(106, 17, 203, 0.2);
+}
+
+.answerContent {
+  width: 100%;
+}
+
+.answerText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  text-align: center;
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+.nextQuestionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1.5rem auto;
+}
+
+.nextQuestionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+}
+
+.handsUpIcon {
+  margin-right: 10px;
+}
+
+/* Results Stage */
+.resultsStage h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #6a11cb;
+  text-align: center;
+}
+
+.resultsIntro {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #a0aec0;
+}
+
+.judgeResult {
+  background: rgba(30, 30, 40, 0.7);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.judgeResult::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/pitch_interview_bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.judgeHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.judgeName {
+  font-size: 1.3rem;
+  color: #2575fc;
+  margin-left: 1rem;
+}
+
+.scoreRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scoreLabel, .investmentLabel {
+  color: #a0aec0;
+}
+
+.scoreValue {
+  color: #f6ad55;
+  font-weight: bold;
+}
+
+.investmentValue {
+  color: #68d391;
+  font-weight: bold;
+}
+
+.feedbackContent {
+  background: rgba(20, 20, 30, 0.5);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-left: 3px solid #2575fc;
+}
+
+.feedbackText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+}
+
+.summaryContainer {
+  background: rgba(106, 17, 203, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  border: 1px solid rgba(106, 17, 203, 0.2);
+}
+
+.summaryHeading {
+  font-size: 1.5rem;
+  color: #6a11cb;
+  margin-bottom: 1.5rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.totalInvestment {
+  color: #68d391;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.averageScore {
+  color: #f6ad55;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.valuation {
+  color: #2575fc;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.decisionContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.decisionHeading {
+  font-size: 1.5rem;
+  color: #6a11cb;
+  margin-bottom: 1rem;
+}
+
+.decisionIntro {
+  margin-bottom: 1.5rem;
+  color: #a0aec0;
+}
+
+.decisionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.acceptButton {
+  background: linear-gradient(90deg, #10b981, #059669);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.acceptButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+.negotiateButton {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.negotiateButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+}
+
+.rejectButton {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rejectButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+}
+
+.outcomeContainer {
+  background: rgba(30, 30, 40, 0.7);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.outcomeHeading {
+  font-size: 1.5rem;
+  color: #6a11cb;
+  margin-bottom: 1.5rem;
+}
+
+.outcomeMessage {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.returnButton {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.returnButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+}
+
+/* Progress Indicator */
+.progressIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.progressStep {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(30, 30, 40, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #a0aec0;
+  position: relative;
+  z-index: 2;
+}
+
+.progressStep.active {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  box-shadow: 0 0 15px rgba(106, 17, 203, 0.5);
+}
+
+.progressStep.completed {
+  background: #10b981;
+  color: white;
+}
+
+.progressLine {
+  flex-grow: 1;
+  height: 3px;
+  background: rgba(30, 30, 40, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+.progressLine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  transition: width 0.5s ease;
+}
+
+/* Loading indicator */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.loadingSpinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(106, 17, 203, 0.1);
+  border-radius: 50%;
+  border-top-color: #2575fc;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+.loadingText {
+  font-size: 1.2rem;
+  color: #2575fc;
+}
+
+/* Animations */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes thinking {
+  0%, 80%, 100% { 
+    transform: scale(0);
+  } 40% { 
+    transform: scale(1.0);
+  }
+}
+
+/* Confetti animation */
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .main {
+    padding: 1.5rem;
+  }
+  
+  .navigationButtons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .navButton {
+    width: 100%;
+  }
+  
+  .decisionButtons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .acceptButton, .negotiateButton, .rejectButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .main {
+    padding: 1rem;
+  }
+  
+  .welcomeStage h2, .coachingStage h2, .demoDayStage h2, .qaStage h2, .resultsStage h2 {
+    font-size: 1.5rem;
+  }
+  
+  .description, .stageIntro {
+    font-size: 1rem;
+  }
+  
+  .actionButton {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .progressStep {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Add these styles for the improved QA stage */
+.conversationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.judgeProfile {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.judgeAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: #1a1a2e;
+}
+
+.judgeInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.judgeInfo h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.judgeInfo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+.questionBubble {
+  background: rgba(30, 30, 40, 0.8);
+  border-radius: 12px 12px 12px 0;
+  padding: 1.2rem;
+  max-width: 80%;
+  align-self: flex-start;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-left: 3px solid #e74c3c;
+}
+
+.answerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.answerBubble {
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 12px 12px 0 12px;
+  padding: 1.2rem;
+  max-width: 80%;
+  align-self: flex-end;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-right: 3px solid #3498db;
+  margin-bottom: 0.5rem;
+}
+
+.alexProfile {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.alexInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.alexInfo h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.alexInfo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+.alexAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: #1a1a2e;
+}
+
+.nextQuestionCard {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.nextQuestionButton {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+}
+
+.nextQuestionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
+}
+
+.nextInvestorCard {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 0.5rem;
+  margin-right: 0.8rem;
+}
+
+.wavingHand {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  animation: wave 1s infinite;
+}
+
+.nextInvestorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.nextInvestorInfo h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.nextInvestorInfo p {
+  margin: 0;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  75% { transform: rotate(-15deg); }
+}
+
+/* Add these styles for the flow chart in welcome stage */
+.flowChartContainer {
+  background: rgba(30, 30, 40, 0.7);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.flowChartTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #6a11cb;
+  text-align: center;
+  font-weight: 600;
+}
+
+.flowChart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flowStep {
+  background: rgba(20, 20, 30, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 220px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.flowStep:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(106, 17, 203, 0.2);
+  border-color: rgba(106, 17, 203, 0.3);
+}
+
+.flowStepNumber {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(106, 17, 203, 0.3);
+}
+
+.flowStepContent {
+  text-align: center;
+}
+
+.flowStepContent h3 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.1rem;
+  color: #2575fc;
+}
+
+.flowStepContent p {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  color: #a0aec0;
+  line-height: 1.4;
+}
+
+.flowStepIcon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background: rgba(106, 17, 203, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowArrow {
+  font-size: 1.5rem;
+  color: #6a11cb;
+  margin: 0 0.5rem;
+}
+
+/* Media query for mobile flow chart */
+@media (max-width: 768px) {
+  .flowChart {
+    flex-direction: column;
+  }
+  
+  .flowArrow {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Skip buttons for QA stage */
+.skipAllContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.skipAllButton {
+  background: rgba(30, 30, 40, 0.7);
+  color: #a0aec0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skipAllButton:hover {
+  background: rgba(30, 30, 40, 0.9);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.qaControlsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.skipButton {
+  background: rgba(30, 30, 40, 0.7);
+  color: #a0aec0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skipButton:hover {
+  background: rgba(30, 30, 40, 0.9);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Envelope-style feedback */
+.envelopeFeedback {
+  background: rgba(30, 30, 40, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.envelopeFeedback::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+
+.envelopeHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.envelopeIcon {
+  width: 40px;
+  height: 40px;
+  background: rgba(106, 17, 203, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.envelopeTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.feedbackBubble {
+  background: rgba(20, 20, 30, 0.7);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #6a11cb;
+}
+
+.feedbackText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.investmentOffer {
+  font-size: 1.1rem;
+  text-align: right;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.investmentAmount {
+  font-weight: 600;
+  color: #4ade80;
+  margin-left: 0.5rem;
+  background: rgba(74, 222, 128, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+}
+
+.rejectionAmount {
+  font-weight: 600;
+  color: #f87171;
+  margin-left: 0.5rem;
+  background: rgba(248, 113, 113, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+}
+
+.nextButton {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 1.5rem auto;
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+}
+
+.nextButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
+} 
