@@ -5,19 +5,23 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "lint": "next lint",
     "heroku-postbuild": "npm install --production=false && npm run build",
     "generate-voice-content": "node scripts/generate-voice-content.js",
     "generate-audio": "node scripts/generate-placeholder-audio.js",
-    "generate-tts-audio": "node scripts/generate-openai-audio.js"
+    "generate-tts-audio": "node scripts/generate-openai-audio.js",
+    "compress-audio": "node scripts/compress-audio.js",
+    "upload-to-web3": "node scripts/upload-to-web3storage.js"
   },
   "dependencies": {
     "axios": "^1.8.1",
     "dotenv": "^16.4.7",
+    "mime": "^4.0.6",
     "next": "^14.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "web3.storage": "^4.5.5"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",

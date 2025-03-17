@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { resolveIpfsUrl } from '@/utils/ipfsResolver';
 
 // Map of content types to audio files
 const audioMap = {
@@ -73,72 +74,76 @@ export function useAudio() {
   const getAudioFile = (text, voiceType, judgeIndex = 0, questionIndex = 0) => {
     // For coaching questions and follow-ups
     if (voiceType === 'alex' && currentAudioKey) {
-      return `/audio/${audioMap[currentAudioKey]}`;
+      const fileName = audioMap[currentAudioKey];
+      return resolveIpfsUrl(fileName);
     }
     
     if (voiceType === 'alex-followup' && currentAudioKey) {
-      return `/audio/${audioMap[`${currentAudioKey}_followup`]}`;
+      const fileName = `${currentAudioKey}_followup`;
+      return resolveIpfsUrl(audioMap[fileName]);
     }
     
     // For judge questions
     if (voiceType === 'judge') {
-      return `/audio/judge_${judgeIndex + 1}_question_${questionIndex + 1}.mp3`;
+      const fileName = `judge_${judgeIndex + 1}_question_${questionIndex + 1}.mp3`;
+      return resolveIpfsUrl(fileName);
     }
     
     // For judge feedback
     if (voiceType === 'judge-feedback') {
-      return `/audio/judge_${judgeIndex + 1}_feedback.mp3`;
+      const fileName = `judge_${judgeIndex + 1}_feedback.mp3`;
+      return resolveIpfsUrl(fileName);
     }
     
     // For Alex answers to judge questions
     if (voiceType === 'alex' && text.includes('customer acquisition')) {
-      return `/audio/alex_answer_cac_ltv.mp3`;
+      return resolveIpfsUrl('alex_answer_cac_ltv.mp3');
     } else if (voiceType === 'alex' && text.includes('first 100 customers')) {
-      return `/audio/alex_answer_customers.mp3`;
+      return resolveIpfsUrl('alex_answer_customers.mp3');
     } else if (voiceType === 'alex' && text.includes('different from existing')) {
-      return `/audio/alex_answer_differentiation.mp3`;
+      return resolveIpfsUrl('alex_answer_differentiation.mp3');
     } else if (voiceType === 'alex' && text.includes('go-to-market')) {
-      return `/audio/alex_answer_go_to_market.mp3`;
+      return resolveIpfsUrl('alex_answer_go_to_market.mp3');
     } else if (voiceType === 'alex' && text.includes('scalable')) {
-      return `/audio/alex_answer_scalability.mp3`;
+      return resolveIpfsUrl('alex_answer_scalability.mp3');
     } else if (voiceType === 'alex' && text.includes('risks')) {
-      return `/audio/alex_answer_risks.mp3`;
+      return resolveIpfsUrl('alex_answer_risks.mp3');
     } else if (voiceType === 'alex' && text.includes('team')) {
-      return `/audio/alex_answer_team.mp3`;
+      return resolveIpfsUrl('alex_answer_team.mp3');
     } else if (voiceType === 'alex' && text.includes('revenue model')) {
-      return `/audio/alex_answer_revenue.mp3`;
+      return resolveIpfsUrl('alex_answer_revenue.mp3');
     } else if (voiceType === 'alex' && text.includes('investment capital')) {
-      return `/audio/alex_answer_funding.mp3`;
+      return resolveIpfsUrl('alex_answer_funding.mp3');
     }
     
     // For pitch presentations
     if (voiceType === 'pitch') {
       if (text.includes('AI') || text.includes('artificial intelligence')) {
-        return `/audio/pitch_ai.mp3`;
+        return resolveIpfsUrl('pitch_ai.mp3');
       } else if (text.includes('blockchain')) {
-        return `/audio/pitch_blockchain.mp3`;
+        return resolveIpfsUrl('pitch_blockchain.mp3');
       } else {
-        return `/audio/pitch_wearable.mp3`;
+        return resolveIpfsUrl('pitch_wearable.mp3');
       }
     }
     
     // For system messages
     if (voiceType === 'system') {
       if (text.includes('Congratulations')) {
-        return `/audio/system_accept.mp3`;
+        return resolveIpfsUrl('system_accept.mp3');
       } else if (text.includes('negotiate')) {
-        return `/audio/system_negotiate.mp3`;
+        return resolveIpfsUrl('system_negotiate.mp3');
       } else if (text.includes('reject')) {
-        return `/audio/system_reject.mp3`;
+        return resolveIpfsUrl('system_reject.mp3');
       } else if (text.includes('Welcome') || text.includes("Hi, I'm Alex")) {
-        return `/audio/system_intro.mp3`;
+        return resolveIpfsUrl('system_intro.mp3');
       } else {
-        return `/audio/system_conclusion.mp3`;
+        return resolveIpfsUrl('system_conclusion.mp3');
       }
     }
     
     // Default fallback
-    return `/audio/alex_question_1.mp3`;
+    return resolveIpfsUrl('alex_question_1.mp3');
   };
   
   // Function to play audio
@@ -151,7 +156,7 @@ export function useAudio() {
       
       if (answerKey) {
         // Use the specific answer audio file
-        audioFile = `/audio/${answerKey}.mp3`;
+        audioFile = getAudioFile(text, voiceType, judgeIndex, questionIndex);
       } else {
         audioFile = getAudioFile(text, voiceType, judgeIndex, questionIndex);
       }
