@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "cp -r src/pages . && cp -r src/app . && NODE_OPTIONS=--max_old_space_size=4096 NEXT_TELEMETRY_DISABLED=1 next build && rm -rf pages app",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "lint": "next lint",
     "heroku-postbuild": "npm run build"
   },
