@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { GameState, GameAction, gameApi } from '@/services/api';
+import { GameState, gameApi } from '@/services/api';
+import type { GameAction as ApiGameAction } from '@/services/api';
 import { WebSocketService, getWebSocketService, resetWebSocketService } from '@/services/websocket';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import ErrorMessage from '@/components/ErrorMessage';
@@ -38,6 +39,8 @@ const translateAction = (actionType: string): string => {
 
 // 辅助函数 - 将道具类型翻译为中文
 const translateItemType = (itemType: string): string => {
+  if (!itemType) return '未知道具';
+  
   const itemMap: Record<string, string> = {
     'aggressive': '攻击牌',
     'shield': '防御牌',
@@ -53,9 +56,18 @@ const getPlayerName = (playerId: string | null): string => {
   return playerId;
 };
 
-// 辅助函数 - 格式化游戏动作
-const formatGameAction = (action: GameAction, gameState: GameState): string => {
-  // 如果有描述字段，直接使用
+// Rename the interface to avoid conflict
+interface GameActionWithOptionals {
+  action_type: string;
+  player_id: string;
+  amount?: number;
+  item_type?: string;
+  target_player?: string;
+  description?: string;
+}
+
+// Update the formatGameAction function to use the new interface
+const formatGameAction = (action: ApiGameAction, gameState: GameState): string => {
   if (action.description) {
     return action.description;
   }
@@ -65,31 +77,34 @@ const formatGameAction = (action: GameAction, gameState: GameState): string => {
 
   switch (action.action_type) {
     case 'buy_item':
-      return `${playerName} 花费 ${action.amount} 代币购买了 ${translateItemType(action.item_type)}`;
+      return `${playerName} 花费 ${action.amount || 0} 代币购买了 ${translateItemType(action.item_type || '')}`;
+    
+    case 'balance_change':
+      // Add null check for amount
+      const amount = action.amount || 0;
+      return `${playerName} ${amount > 0 ? '获得' : '损失'} ${Math.abs(amount)} 代币`;
     
     case 'use_item':
       const targetPlayer = gameState.players.find(p => p.id === action.target_player);
       const targetName = targetPlayer?.name || action.target_player;
-      return `${playerName} 对 ${targetName} 使用了 ${translateItemType(action.item_type)}`;
-    
-    case 'balance_change':
-      return `${playerName} ${action.amount > 0 ? '获得' : '损失'} ${Math.abs(action.amount)} 代币`;
+      return `${playerName} 对 ${targetName} 使用了 ${translateItemType(action.item_type || '')}`;
     
     case 'item_acquired':
-      return `${playerName} 获得了道具: ${translateItemType(action.item_type)}`;
+      return `${playerName} 获得了道具: ${translateItemType(action.item_type || '')}`;
     
     case 'item_used':
-      return `${playerName} 使用了道具: ${translateItemType(action.item_type)}`;
+      return `${playerName} 使用了道具: ${translateItemType(action.item_type || '')}`;
     
     default:
       return `${playerName} ${translateAction(action.action_type)}`;
   }
 };
 
-export default function GamePage() {
+// Main component that uses useSearchParams
+function GamePageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const gameId = searchParams.get('gameId');
+  const gameId = searchParams?.get('gameId') || null;
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -116,7 +131,7 @@ export default function GamePage() {
       try {
         if (gameId && isComponentMounted) {
           console.log('定期刷新游戏状态...');
-          const state = await gameApi.getGameState(gameId);
+          const state = await gameApi.getGameState(gameId as string);
           if (isComponentMounted) {
             setGameState(state);
             // 只在WebSocket未连接时才添加日志
@@ -133,7 +148,7 @@ export default function GamePage() {
     async function initGame() {
       try {
         // 获取游戏状态
-        const state = await gameApi.getGameState(gameId);
+        const state = await gameApi.getGameState(gameId as string);
         if (isComponentMounted) {
           setGameState(state);
           setLoading(false); // 加载完成，可以显示界面了
@@ -199,7 +214,7 @@ export default function GamePage() {
             
             // 连接到游戏
             try {
-              await wsService.connect(gameId);
+              await wsService.connect(gameId as string);
             } catch (err) {
               console.warn('无法连接到WebSocket:', err);
               if (isComponentMounted) {
@@ -251,10 +266,10 @@ export default function GamePage() {
   const handleGameEnd = async (winnerId: string) => {
     try {
       // Get game IDs from localStorage
-      const gameId = searchParams.get('gameId');
+      const currentGameId = searchParams?.get('gameId');
       const contractGameId = localStorage.getItem('contract_game_id');
       
-      if (!gameId || !contractGameId) {
+      if (!currentGameId || !contractGameId) {
         console.error('Game ID or contract game ID not found');
         return;
       }
@@ -291,6 +306,7 @@ export default function GamePage() {
     setWalletPublicKey(publicKey);
   };
 
+  // Return the JSX
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen p-4">
@@ -440,5 +456,14 @@ export default function GamePage() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Wrapper component with Suspense
+export default function GamePage() {
+  return (
+    <Suspense fallback={<LoadingSpinner size="large" text="加载游戏中..." />}>
+      <GamePageContent />
+    </Suspense>
   );
 } 

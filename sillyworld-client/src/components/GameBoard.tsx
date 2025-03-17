@@ -9,14 +9,14 @@ interface GameBoardProps {
 }
 
 const GameBoard: FC<GameBoardProps> = ({ gameState }) => {
-  const { players, current_round, prize_pool, phase } = gameState;
+  const { players, round, prize_pool, phase } = gameState;
 
   return (
     <div className="bg-gradient-to-br from-purple-800 to-indigo-900 rounded-lg shadow-xl p-6 mb-6">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold text-white">Agent Arena</h2>
         <div className="bg-purple-700 text-white px-4 py-2 rounded-full">
-          回合 {current_round}
+          回合 {round}
         </div>
       </div>
 

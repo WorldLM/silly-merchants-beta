@@ -15,7 +15,7 @@ const GameControls: FC<GameControlsProps> = ({ gameState, wsService }) => {
   const [message, setMessage] = useState<string>('');
   const [selectedItem, setSelectedItem] = useState<string>('');
 
-  const isGameActive = gameState.is_active && !gameState.winner;
+  const isGameActive = gameState.status === 'active' && !gameState.winner_id;
   const otherPlayers = gameState.players.filter(p => p.id !== 'player1'); // 假设当前玩家ID为player1
 
   // 发送游戏动作
@@ -41,14 +41,14 @@ const GameControls: FC<GameControlsProps> = ({ gameState, wsService }) => {
     <div className="bg-gray-800 rounded-lg shadow-lg p-4">
       <h2 className="text-xl font-bold text-white mb-4">游戏控制</h2>
 
-      {!isGameActive && gameState.winner && (
+      {!isGameActive && gameState.winner_id && (
         <div className="bg-green-700 text-white p-4 rounded-lg mb-4 text-center">
           <p className="text-lg font-bold">游戏已结束!</p>
-          <p>获胜者: {gameState.winner}</p>
+          <p>获胜者: {gameState.winner_id}</p>
         </div>
       )}
 
-      {!isGameActive && !gameState.winner && (
+      {!isGameActive && !gameState.winner_id && (
         <div className="bg-yellow-700 text-white p-4 rounded-lg mb-4 text-center">
           <p>游戏尚未开始或已暂停</p>
         </div>
