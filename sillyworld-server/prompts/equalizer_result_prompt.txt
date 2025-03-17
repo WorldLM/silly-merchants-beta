@@ -1,0 +1,13 @@
+你的均富卡发挥了作用！
+
+目标玩家：{target_name}
+目标之前余额：{target_before} 代币
+你之前的余额：{player_before} 代币
+
+经过资金平分后：
+目标玩家现在余额：{target_after} 代币
+你现在的余额：{player_after} 代币
+
+这次平分为你{gained_lost}了 {amount} 代币。
+
+请考虑这一变化对你接下来的策略有何影响。 

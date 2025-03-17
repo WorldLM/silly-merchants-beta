@@ -1,22 +1,17 @@
-import '@/styles/globals.css';
+import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
-import { Inter } from 'next/font/google';
-import Head from 'next/head';
+import '../app/globals.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    // Check if Sonic wallet is available, if not, load the mock
+    if (typeof window !== 'undefined' && !('sonicWallet' in window)) {
+      console.log("Sonic wallet not detected, loading mock implementation");
+      import('../services/mockWallet');
+    }
+  }, []);
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <title>Sillyworld</title>
-        <meta name="description" content="Sillyworld - A platform for creative AI experiences" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={`${inter.variable}`}>
-        <Component {...pageProps} />
-      </main>
-    </>
-  );
-} 
+  return <Component {...pageProps} />;
+}
+
+export default MyApp; 
