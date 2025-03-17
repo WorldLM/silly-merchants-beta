@@ -6,11 +6,12 @@
     "sillyworld-client"
   ],
   "scripts": {
-    "build": "cd sillyworld-client && npm install && npm run build",
+    "build": "cd sillyworld-client && npm install --production=false && npm run build",
     "start": "cd sillyworld-client && npm start",
-    "heroku-postbuild": "cd sillyworld-client && npm install && npm run build"
+    "heroku-postbuild": "cd sillyworld-client && npm install --production=false && npm run build"
   },
   "engines": {
-    "node": "18.x"
+    "node": "18.x",
+    "npm": "10.x"
   }
 } 
