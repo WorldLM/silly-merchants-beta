@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: '.next',
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
   async redirects() {
     return [
       {
@@ -9,9 +10,6 @@ const nextConfig = {
         permanent: true,
       },
     ]
-  },
-  experimental: {
-    appDir: true
   }
 }
 
