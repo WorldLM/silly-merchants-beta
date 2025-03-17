@@ -11,7 +11,8 @@
     "heroku-postbuild": "cd sillyworld-client && npm install --production=false && npm run build"
   },
   "engines": {
-    "node": "18.x",
-    "npm": "10.x"
+    "node": "18.17.0",
+    "npm": "10.2.0",
+    "yarn": "0.0.0"
   }
 } 
