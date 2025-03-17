@@ -1,1 +1,1 @@
-web: cd sillyworld-client && npm install && npm run build && npm start 
+web: cd sillyworld-client && npm install && npm run build && PORT=$PORT npm start 
