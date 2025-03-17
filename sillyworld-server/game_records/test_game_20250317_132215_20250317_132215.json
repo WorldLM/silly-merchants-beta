@@ -1,0 +1,153 @@
+{
+  "game_id": "test_game_20250317_132215",
+  "start_time": "2025-03-17 13:22:15",
+  "players": [
+    {
+      "id": "p1",
+      "name": "策略家",
+      "personality": "精明的策略家",
+      "strategy": "注重资源优化"
+    },
+    {
+      "id": "p2",
+      "name": "冒险家",
+      "personality": "大胆的冒险家",
+      "strategy": "高风险高回报"
+    },
+    {
+      "id": "p3",
+      "name": "合作者",
+      "personality": "友好的合作者",
+      "strategy": "寻求双赢机会"
+    }
+  ],
+  "rounds": [
+    {
+      "round_number": 1,
+      "phases": [
+        {
+          "phase_name": "道具阶段",
+          "actions": [
+            {
+              "action_type": "item_use",
+              "player_id": "p1",
+              "player_name": "策略家",
+              "item_type": "情报卡",
+              "target": "冒险家"
+            }
+          ]
+        },
+        {
+          "phase_name": "说服阶段",
+          "actions": [
+            {
+              "action_type": "persuasion",
+              "player_id": "p1",
+              "player_name": "策略家",
+              "target": "合作者",
+              "amount": 15,
+              "success": true
+            },
+            {
+              "action_type": "persuasion",
+              "player_id": "p2",
+              "player_name": "冒险家",
+              "target": "策略家",
+              "amount": 25,
+              "success": false
+            }
+          ]
+        },
+        {
+          "phase_name": "结算阶段",
+          "actions": [
+            {
+              "action_type": "purchase",
+              "player_id": "p1",
+              "player_name": "策略家",
+              "item_type": "护盾卡",
+              "cost": 10
+            }
+          ]
+        }
+      ],
+      "end_state": {
+        "current_round": 1,
+        "phase": "结算阶段",
+        "prize_pool": 25,
+        "players": [
+          {
+            "id": "p1",
+            "name": "策略家",
+            "balance": 105,
+            "items": [
+              "护盾卡"
+            ]
+          },
+          {
+            "id": "p2",
+            "name": "冒险家",
+            "balance": 85,
+            "items": []
+          },
+          {
+            "id": "p3",
+            "name": "合作者",
+            "balance": 85,
+            "items": [
+              "均富卡"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "round_number": 2,
+      "phases": [
+        {
+          "phase_name": "道具阶段",
+          "actions": [
+            {
+              "action_type": "item_use",
+              "player_id": "p3",
+              "player_name": "合作者",
+              "item_type": "均富卡",
+              "target": "策略家"
+            }
+          ]
+        }
+      ],
+      "end_state": {
+        "current_round": 2,
+        "phase": "道具阶段",
+        "prize_pool": 25,
+        "players": [
+          {
+            "id": "p1",
+            "name": "策略家",
+            "balance": 95,
+            "items": [
+              "护盾卡"
+            ]
+          },
+          {
+            "id": "p2",
+            "name": "冒险家",
+            "balance": 85,
+            "items": []
+          },
+          {
+            "id": "p3",
+            "name": "合作者",
+            "balance": 95,
+            "items": []
+          }
+        ]
+      }
+    }
+  ],
+  "end_time": "2025-03-17 13:22:15",
+  "total_rounds": 2,
+  "winner": "策略家",
+  "winner_id": "p1"
+}

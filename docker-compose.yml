@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ./sillyworld-server
+      dockerfile: Dockerfile
+    ports:
+      - "8007:8007"
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - PORT=8007
+    volumes:
+      - ./sillyworld-server/logs:/app/logs
+      - ./sillyworld-server/game_records:/app/game_records
+    restart: unless-stopped
+
+  client:
+    build:
+      context: ./sillyworld-client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://server:8007
+      - NEXT_PUBLIC_WS_URL=ws://server:8007
+    depends_on:
+      - server
+    restart: unless-stopped 

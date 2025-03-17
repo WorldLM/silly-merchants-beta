@@ -5,37 +5,26 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node server.js",
-    "lint": "next lint",
-    "heroku-postbuild": "npm install --production=false && npm run build",
-    "generate-voice-content": "node scripts/generate-voice-content.js",
-    "generate-audio": "node scripts/generate-placeholder-audio.js",
-    "generate-tts-audio": "node scripts/generate-openai-audio.js",
-    "compress-audio": "node scripts/compress-audio.js",
-    "upload-to-web3": "node scripts/upload-to-web3storage.js"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "axios": "^1.8.1",
-    "dotenv": "^16.4.7",
-    "mime": "^4.0.6",
-    "next": "^14.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "web3.storage": "^4.5.5"
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/web3.js": "^1.98.0",
+    "axios": "^1.8.3",
+    "next": "^14.2.24",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20.8.9",
-    "@types/react": "^18.2.33",
-    "@types/react-dom": "^18.2.14",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.57.0",
+    "@types/node": "^20.17.24",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.0.0",
     "eslint-config-next": "^14.0.0",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.2.2"
-  },
-  "engines": {
-    "node": "18.x",
-    "npm": "10.x"
   }
 }

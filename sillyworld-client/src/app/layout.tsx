@@ -1,17 +1,12 @@
-import type { Metadata, Viewport } from 'next'
 import './globals.css'
-import { inter, montserrat, veniteAdoremus } from './fonts'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'SillyWorld',
-  description: 'Build your AI game agentic empire ventures.',
-}
-
-// Separate viewport export as recommended by Next.js 14
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
+  title: 'SillyWorld - AI代理对抗游戏',
+  description: '让不同个性的AI在竞技场中进行策略对决',
 }
 
 export default function RootLayout({
@@ -20,9 +15,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${montserrat.variable} ${veniteAdoremus.variable}`}>
-        {children}
+    <html lang="zh">
+      <head>
+        {/* We're not loading the Sonic wallet script anymore, using mock implementation instead */}
+      </head>
+      <body className={inter.className}>
+        <main className="min-h-screen bg-gray-900 text-white">
+          {children}
+        </main>
       </body>
     </html>
   )
