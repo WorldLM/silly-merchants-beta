@@ -124,7 +124,7 @@ The contract uses the following PDAs:
 3. **Initialize Game** (Admin only):
    ```typescript
    const gameId = new anchor.BN(Date.now()); // Use timestamp for unique ID
-   const entryFee = new anchor.BN(10000000); // 0.01 SOL
+   const entryFee = new anchor.BN(100000000); // 0.01 SOL
    
    const [gamePDA] = await PublicKey.findProgramAddress(
      [Buffer.from("game"), gameId.toArrayLike(Buffer, 'le', 8)],
