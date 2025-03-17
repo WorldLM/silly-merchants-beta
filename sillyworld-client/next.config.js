@@ -2,6 +2,9 @@
 const nextConfig = {
   distDir: '.next',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  experimental: {
+    serverComponentsExternalPackages: ['tailwindcss']
+  },
   async redirects() {
     return [
       {
