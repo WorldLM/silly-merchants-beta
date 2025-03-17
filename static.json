@@ -1,5 +1,5 @@
 {
-  "root": "build/",
+  "root": "sillyworld-client/.next/",
   "routes": {
     "/**": "index.html"
   }
