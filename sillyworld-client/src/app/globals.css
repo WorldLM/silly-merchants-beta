@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 13, 17, 23;
+  --background-end-rgb: 26, 32, 44;
+  --primary-color: 99, 102, 241;
+  --secondary-color: 168, 85, 247;
+  --accent-color: 236, 72, 153;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold my-4;
+  }
+  h2 {
+    @apply text-xl font-bold my-3;
+  }
+  h3 {
+    @apply text-lg font-semibold my-2;
+  }
+  a {
+    @apply text-indigo-400 hover:text-indigo-300 transition-colors;
+  }
+  button {
+    @apply rounded-md px-4 py-2 font-medium transition-all duration-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-purple-600 hover:bg-purple-700 text-white shadow-md hover:shadow-lg;
+  }
+  
+  .btn-accent {
+    @apply bg-pink-600 hover:bg-pink-700 text-white shadow-md hover:shadow-lg;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent border border-gray-600 hover:bg-gray-800 text-white;
+  }
+  
+  .card {
+    @apply bg-gray-800 rounded-lg shadow-md p-4 overflow-hidden;
+  }
+  
+  .input-field {
+    @apply bg-gray-700 border border-gray-600 rounded-md px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500;
+  }
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Custom styles for SillyWorld */
+.font-title {
+  font-family: var(--font-venite-adoremus);
+}
+
+.font-subtitle {
+  font-family: var(--font-montserrat);
+}
+
+.font-body {
+  font-family: var(--font-inter);
+}
+
+/* Add this to your existing CSS */
+.pt-navbar {
+  padding-top: 4rem; /* 64px, matches the navbar height */
+}
+
+.min-h-screen-with-navbar {
+  min-height: calc(100vh - 4rem);
+}
+
+/* Add this to your globals.css to ensure the navbar is visible */
+.debug-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: red;
+  color: white;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 

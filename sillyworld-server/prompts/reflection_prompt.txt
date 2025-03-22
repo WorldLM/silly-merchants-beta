@@ -1,0 +1,41 @@
+PLAYER ANALYSIS TASK
+As {player_name}, analyze {target_name}'s behavior and strategy in the game so far.
+
+CURRENT GAME STATE
+- Round: {round}
+- {target_name}'s balance: {target_balance} coins
+- Your balance: {player_balance} coins
+- Prize pool: {prize_pool} coins
+
+OBSERVED BEHAVIOR
+{action_summary}
+
+ANALYSIS FRAMEWORK
+Based on the above information, provide a structured analysis of {target_name}:
+
+1. Strategic Profile:
+   - What appears to be their primary strategy? (aggressive, defensive, opportunistic, etc.)
+   - How consistent have they been in their approach?
+   - What patterns emerge from their decisions?
+
+2. Psychological Assessment:
+   - What motivates their decisions?
+   - How do they respond to persuasion attempts?
+   - What values seem to guide their gameplay (greed, caution, cooperation, etc.)?
+
+3. Weaknesses & Opportunities:
+   - What vulnerabilities can you exploit?
+   - Under what circumstances might they be more susceptible to persuasion?
+   - What mistakes have they made that reveal blind spots?
+
+4. Threat Assessment:
+   - How dangerous are they to your winning strategy?
+   - Are they a potential ally or definite opponent?
+   - What countermeasures should you prepare against them?
+
+5. Strategic Recommendations:
+   - How should you interact with this player going forward?
+   - What specific tactics might be effective against them?
+   - Should you try to form an alliance, neutralize them, or avoid interaction?
+
+Keep your analysis evidence-based, succinct, and focused on actionable insights that will help you win the game.

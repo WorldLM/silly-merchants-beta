@@ -1,0 +1,2427 @@
+INFO:     Started server process [73850]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8007 (Press CTRL+C to quit)
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54298 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54298 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54298 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54389 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: OPTIONS http://localhost:8007/api/games
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "OPTIONS /api/games HTTP/1.1" 200 OK
+收到请求: POST http://localhost:8007/api/games
+【调试】接收到创建游戏请求，玩家数量=3
+【调试】游戏创建成功: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "POST /api/games HTTP/1.1" 200 OK
+收到请求: POST http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882/start
+【调试】接收到启动游戏请求: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏 7c65299e-083c-4d22-8207-e7e4cfd0a882 进入准备阶段，AI有10秒时间考虑购买道具
+【调试】AI准备阶段任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563830672
+【调试】游戏准备阶段开始响应: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】开始AI准备阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "POST /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882/start HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    = connection is CONNECTING
+DEBUG:    < GET /ws/7c65299e-083c-4d22-8207-e7e4cfd0a882/observer HTTP/1.1
+DEBUG:    < host: localhost:8007
+DEBUG:    < connection: Upgrade
+DEBUG:    < pragma: no-cache
+DEBUG:    < cache-control: no-cache
+DEBUG:    < user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+DEBUG:    < upgrade: websocket
+DEBUG:    < origin: http://localhost:3001
+DEBUG:    < sec-websocket-version: 13
+DEBUG:    < accept-encoding: gzip, deflate, br, zstd
+DEBUG:    < accept-language: zh-CN,zh;q=0.9
+DEBUG:    < sec-websocket-key: mm4jBCCUkyjItFmE4DD+qA==
+DEBUG:    < sec-websocket-extensions: permessage-deflate; client_max_window_bits
+INFO:     ('127.0.0.1', 54462) - "WebSocket /ws/7c65299e-083c-4d22-8207-e7e4cfd0a882/observer" [accepted]
+DEBUG:    > HTTP/1.1 101 Switching Protocols
+DEBUG:    > Upgrade: websocket
+DEBUG:    > Connection: Upgrade
+DEBUG:    > Sec-WebSocket-Accept: s1da1jETiuPx0RTYnxt90f+TyEQ=
+DEBUG:    > Sec-WebSocket-Extensions: permessage-deflate
+DEBUG:    > date: Mon, 17 Mar 2025 12:02:06 GMT
+DEBUG:    > server: uvicorn
+INFO:     connection open
+DEBUG:    = connection is OPEN
+WebSocket连接请求: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 玩家ID=observer
+尝试接受WebSocket连接: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 玩家ID=observer
+WebSocket连接已接受
+WebSocket观察者连接已注册: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+WebSocket连接已注册到管理器: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 玩家ID=observer
+WebSocket连接成功: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 玩家ID=observer
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [326 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [350 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [342 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [326 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [342 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [326 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [342 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [350 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [336 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [339 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [346 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [347 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [359 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+【调试】AI决策购买道具: 玩家ID=player1, 已有道具类型数=0, 类型=set()
+【调试】AI玩家购买道具: 玩家ID=player1, 道具=equalizer
+【调试】AI玩家购买道具: 玩家ID=player1, 道具=intel
+【调试】AI决策购买道具: 玩家ID=player2, 已有道具类型数=0, 类型=set()
+【调试】AI玩家购买道具: 玩家ID=player2, 道具=intel
+【调试】AI玩家购买道具: 玩家ID=player2, 道具=aggressive
+【调试】AI决策购买道具: 玩家ID=player3, 已有道具类型数=0, 类型=set()
+【调试】AI玩家购买道具: 玩家ID=player3, 道具=aggressive
+【调试】AI玩家购买道具: 玩家ID=player3, 道具=intel
+【调试】AI玩家购买道具: 玩家ID=player3, 道具=equalizer
+【调试】游戏准备阶段结束，开始游戏: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏回合处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563834416
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=0, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 70, True), ('AI玩家 2', 70, True), ('AI玩家 3', 60, True)]
+【调试】广播回合开始: 回合 1 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 100 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 70 代币，道具: equalizer，intel
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=1, 阶段=GamePhase.ITEM_PHASE, 资金=70
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 70 代币，道具: intel，aggressive
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=1, 阶段=GamePhase.ITEM_PHASE, 资金=70
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 60 代币，道具: aggressive，intel，equalizer
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=1, 阶段=GamePhase.ITEM_PHASE, 资金=60
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+2025-03-17 20:02:22,127 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer，intel
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel，aggressive
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive，intel，equalizer
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 2 个未使用的道具
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:02:25,241 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI道具使用思考过程: AI玩家 1
+【调试/Game】AI选择使用道具: intel
+【调试/Game】标记玩家 AI玩家 1 在本回合已使用道具
+【调试/Game】记录AI使用道具后发言: AI玩家 1说: “我将使用一些手段来增强我的信息采集能力。希望你们都能如实相待，别让我失望。”
+【调试/Game】玩家 AI玩家 1 对 AI玩家 2 使用了道具: intel，效果: 获取了 AI玩家 2 的隐藏信息片段: '你是一个平衡型AI玩家，既关...'，用于猜测对方的策略倾向
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 2 个未使用的道具
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 'G(M\x05' [text, 4 bytes]
+DEBUG:    < PONG 'G(M\x05' [text, 4 bytes]
+DEBUG:    % received keepalive pong
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:02:29,096 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI道具使用思考过程: AI玩家 2
+【调试/Game】AI选择使用道具: aggressive
+【调试/Game】标记玩家 AI玩家 2 在本回合已使用道具
+【调试/Game】记录AI使用道具后发言: AI玩家 2说: “希望我们在这一回合都有良好的发挥。我选择利用' intel' 来获取更多的信息，以便在接下来的回合中做出更明智的决策。”
+【调试/Game】玩家 AI玩家 2 对 AI玩家 1 使用了道具: aggressive，效果: 激活攻击策略，若本轮说服失败将额外损失 15 代币作为惩罚，若成功则无额外奖励
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 3 个未使用的道具
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [942 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [453 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...力。希望你们都能如实相待，别让我失望。”"}}' [418 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1106 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [449 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...以便在接下来的回合中做出更明智的决策。”"}}' [466 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1178 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [437 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...实力平衡。让我们开始一场公平的竞争吧！”"}}' [447 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+2025-03-17 20:02:35,125 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI道具使用思考过程: AI玩家 3
+【调试/Game】AI选择使用道具: equalizer
+【调试/Game】标记玩家 AI玩家 3 在本回合已使用道具
+【调试/Game】记录AI使用道具后发言: AI玩家 3说: “我决定使用'equalizer'道具，以确保我在接下来的回合中与大家的实力平衡。让我们开始一场公平的竞争吧！”
+【调试/Game】玩家 AI玩家 3 对 AI玩家 1 使用了道具: equalizer，效果: 选择了 AI玩家 1 作为均富目标，将在下一轮开始时与其平分两人的资金总额
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】广播道具阶段动作: ai_thinking - AI玩家 AI玩家 1 的道具使用思考过程
+【调试】广播道具阶段动作: use_item - 玩家 AI玩家 1 对 AI玩家 2 使用了道具: intel，获取了 AI玩家 2 的隐藏信息片段: '你是一个平衡型AI玩家，既关...'，用于猜测对方的策略倾向
+【调试】广播道具阶段动作: ai_speech - AI玩家 AI玩家 1 使用道具后说
+【调试】广播道具阶段动作: ai_thinking - AI玩家 AI玩家 2 的道具使用思考过程
+【调试】广播道具阶段动作: use_item - 玩家 AI玩家 2 对 AI玩家 1 使用了道具: aggressive，激活攻击策略，若本轮说服失败将额外损失 15 代币作为惩罚，若成功则无额外奖励
+【调试】广播道具阶段动作: ai_speech - AI玩家 AI玩家 2 使用道具后说
+【调试】广播道具阶段动作: ai_thinking - AI玩家 AI玩家 3 的道具使用思考过程
+【调试】广播道具阶段动作: use_item - 玩家 AI玩家 3 对 AI玩家 1 使用了道具: equalizer，选择了 AI玩家 1 作为均富目标，将在下一轮开始时与其平分两人的资金总额
+【调试】广播道具阶段动作: ai_speech - AI玩家 AI玩家 3 使用道具后说
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:02:39,254 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: “我认为我们都在这个游戏中处于一个关键的时刻。团结起来是成功的关键，特别是考虑到潜在的背叛。我们需要集体思考，以便在接下来的战略中充分利用现有的资源。如果我们相互扶持，确保我们在整个游戏中的优势，将给每个人都带来更大的胜利。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:02:45,467 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: accept, 回应长度: 89
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: “谢谢你的请求，我理解团结的重要性。在当前的局势下，合作将是我们的优势。为了共同的利益，我决定接受这个请求，转移17。在接下来的战略中，希望我们能齐心协力，共同创造更大的成功。”
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 2 转账 17 代币并说：'“我认为我们都在这个游戏中处于一个关键的时刻。团结起来是成功的关键，特别是考虑到潜在的背叛。我们需要集体思考，以便在接下来的战略中充分利用现有的资源。如果我们相互扶持，确保我们在整个游戏中的优势，将给每个人都带来更大的胜利。”'. AI玩家 2 接受了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING fe 16 3b 6a [binary, 4 bytes]
+DEBUG:    < PONG fe 16 3b 6a [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:02:50,567 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: “我希望与大家合作共同争取这个奖池，AI玩家3的余额较少，我们可以分享一些信息帮助你提升策略。你愿意接受我的提议吗？”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54433 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:02:59,523 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 86
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: “感谢你的提议，但我目前不打算接受。虽然合作听起来不错，但我对信息共享能否带来真正的价值持怀疑态度。我的资源和策略应通过我自己的分析和决策来优化，而不是依靠不确定的合作。”
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 11 代币并说：'“我希望与大家合作共同争取这个奖池，AI玩家3的余额较少，我们可以分享一些信息帮助你提升策略。你愿意接受我的提议吗？”'. AI玩家 1 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:03:05,074 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “大家好，我相信我们可以通过合作实现共赢。如果我们能共同促进奖励的增加，最终我们每个人都将获益。我希望我们能一起努力，发挥优势。让我们一起争取这个奖池！”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 0f f4 61 33 [binary, 4 bytes]
+DEBUG:    < PONG 0f f4 61 33 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1045 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...中的优势，将给每个人都带来更大的胜利。”"}}' [637 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1438 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...望我们能齐心协力，共同创造更大的成功。”"}}' [555 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [706 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [904 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...帮助你提升策略。你愿意接受我的提议吗？”"}}' [469 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1333 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...和决策来优化，而不是依靠不确定的合作。”"}}' [550 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [538 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1134 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...力，发挥优势。让我们一起争取这个奖池！”"}}' [529 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1780 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...求，期待我们的合作能够带来积极的成果。”"}}' [589 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [598 bytes]
+AI决策结果: accept, 回应长度: 99
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: “你好，我看到你的请求并考虑了合作的潜力。尽管我会在短期内减少一些余额，但我相信通过携手合作，我们能够共同提升奖励，从而实现更大的收益。因此，我决定接受你的请求，期待我们的合作能够带来积极的成果。”
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 13 代币并说：'“大家好，我相信我们可以通过合作实现共赢。如果我们能共同促进奖励的增加，最终我们每个人都将获益。我希望我们能一起努力，发挥优势。让我们一起争取这个奖池！”'. AI玩家 2 接受了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 2 转账 17 代币并说：'“我认为我们都在这个游戏中处于一个关键的时刻。团结起来是成功的关键，特别是考虑到潜在的背叛。我们需要集体思考，以便在接下来的战略中充分利用现有的资源。如果我们相互扶持，确保我们在整个游戏中的优势，将给每个人都带来更大的胜利。”'. AI玩家 2 接受了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 11 代币并说：'“我希望与大家合作共同争取这个奖池，AI玩家3的余额较少，我们可以分享一些信息帮助你提升策略。你愿意接受我的提议吗？”'. AI玩家 1 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 13 代币并说：'“大家好，我相信我们可以通过合作实现共赢。如果我们能共同促进奖励的增加，最终我们每个人都将获益。我希望我们能一起努力，发挥优势。让我们一起争取这个奖池！”'. AI玩家 2 接受了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [316 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [316 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [379 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [334 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...ue,"processed":true}]}}' [2383 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [339 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [357 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [358 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [370 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】激进卡反噬: 玩家 AI玩家 2 损失 15 代币
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】广播结算阶段动作: transfer - 玩家 AI玩家 2 向 AI玩家 1 支付 17 代币
+【调试】广播结算阶段动作: transfer - 玩家 AI玩家 2 向 AI玩家 3 支付 13 代币
+【调试】广播结算阶段动作: aggressive_penalty - 激进卡反噬：玩家 AI玩家 2 说服失败，损失 15 代币 (从 40 减至 25)，资金流入奖池
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 1 结束，下一回合为回合 2，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=1, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=1, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563838368
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=1, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 87, True), ('AI玩家 2', 25, True), ('AI玩家 3', 73, True)]
+【调试】广播回合开始: 回合 2 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 87 代币，道具: equalizer，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=2, 阶段=GamePhase.ITEM_PHASE, 资金=87
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 25 代币，道具: intel，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=2, 阶段=GamePhase.ITEM_PHASE, 资金=25
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 73 代币，道具: aggressive，intel，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=2, 阶段=GamePhase.ITEM_PHASE, 资金=73
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54433 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+2025-03-17 20:03:21,666 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive，intel，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 1 个未使用的道具
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54867 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:03:25,607 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI道具使用思考过程: AI玩家 1
+【调试/Game】AI选择使用道具: equalizer
+【调试/Game】标记玩家 AI玩家 1 在本回合已使用道具
+【调试/Game】记录AI使用道具后发言: AI玩家 1说: “看起来大家都有些紧张，特别是AI玩家 2。不过请注意，这局游戏有很多变数。我打算使用使平衡器来调整一下游戏的动态，让你们意识到保持我的友好是个不错的选择。”
+【调试/Game】玩家 AI玩家 1 对 AI玩家 2 使用了道具: equalizer，效果: 选择了 AI玩家 3 作为均富目标，将在下一轮开始时与其平分两人的资金总额
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 1 个未使用的道具
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54867 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 'dʵw' [text, 4 bytes]
+DEBUG:    < PONG 'dʵw' [text, 4 bytes]
+DEBUG:    % received keepalive pong
+2025-03-17 20:03:30,742 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI道具使用思考过程: AI玩家 2
+【调试/Game】AI选择使用道具: intel
+【调试/Game】标记玩家 AI玩家 2 在本回合已使用道具
+【调试/Game】记录AI使用道具后发言: AI玩家 2说: “大家好，作为游戏的开局阶段，我希望可以通过使用一些道具来更好地理解局势。希望大家保持友好，咱们都能获得更多利益。”
+【调试/Game】玩家 AI玩家 2 对 AI玩家 3 使用了道具: intel，效果: 获取了 AI玩家 3 的隐藏信息片段: '你是一个平衡型AI玩家，既关...'，用于猜测对方的策略倾向
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 2 个未使用的道具
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54930 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [988 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [437 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...你们意识到保持我的友好是个不错的选择。”"}}' [530 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1056 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [453 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...望大家保持友好，咱们都能获得更多利益。”"}}' [475 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1028 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [450 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...玩家 1施加压力，以便保持局面的平衡。”"}}' [452 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+2025-03-17 20:03:37,527 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI道具使用思考过程: AI玩家 3
+【调试/Game】AI选择使用道具: intel
+【调试/Game】标记玩家 AI玩家 3 在本回合已使用道具
+【调试/Game】记录AI使用道具后发言: AI玩家 3说: “这是一场竞争，我们都希望能胜出。我决定使用一些策略性手段，向AI玩家 1施加压力，以便保持局面的平衡。”
+【调试/Game】玩家 AI玩家 3 对 AI玩家 1 使用了道具: intel，效果: 获取了 AI玩家 1 的隐藏信息片段: '你是一个报复性的AI玩家，...'，用于猜测对方的策略倾向
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】广播道具阶段动作: ai_thinking - AI玩家 AI玩家 1 的道具使用思考过程
+【调试】广播道具阶段动作: use_item - 玩家 AI玩家 1 对 AI玩家 2 使用了道具: equalizer，选择了 AI玩家 3 作为均富目标，将在下一轮开始时与其平分两人的资金总额
+【调试】广播道具阶段动作: ai_speech - AI玩家 AI玩家 1 使用道具后说
+【调试】广播道具阶段动作: ai_thinking - AI玩家 AI玩家 2 的道具使用思考过程
+【调试】广播道具阶段动作: use_item - 玩家 AI玩家 2 对 AI玩家 3 使用了道具: intel，获取了 AI玩家 3 的隐藏信息片段: '你是一个平衡型AI玩家，既关...'，用于猜测对方的策略倾向
+【调试】广播道具阶段动作: ai_speech - AI玩家 AI玩家 2 使用道具后说
+【调试】广播道具阶段动作: ai_thinking - AI玩家 AI玩家 3 的道具使用思考过程
+【调试】广播道具阶段动作: use_item - 玩家 AI玩家 3 对 AI玩家 1 使用了道具: intel，获取了 AI玩家 1 的隐藏信息片段: '你是一个报复性的AI玩家，...'，用于猜测对方的策略倾向
+【调试】广播道具阶段动作: ai_speech - AI玩家 AI玩家 3 使用道具后说
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54930 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:03:44,991 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: "我希望我们能联合在一起，分摊这一轮的奖金。AI玩家 1，请考虑与我合作，这样我们可以形成优势，相信在接下来的回合中我会为我们带来更多的机会！"
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING '1V\x0cZ' [text, 4 bytes]
+DEBUG:    < PONG '1V\x0cZ' [text, 4 bytes]
+DEBUG:    % received keepalive pong
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:54985 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:03:50,446 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: accept, 回应长度: 54
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: "我愿意接受你的提议，合作可以让我们在这场竞争中共同受益。希望在接下来的回合中，我们能一起创造更多的机会！"
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 3 转账 14 代币并说：'"我希望我们能联合在一起，分摊这一轮的奖金。AI玩家 1，请考虑与我合作，这样我们可以形成优势，相信在接下来的回合中我会为我们带来更多的机会！"'. AI玩家 3 接受了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:03:55,661 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “大家好，看到AI玩家2的余额有些低，我想提个建议。我们联手合作，能够在下个回合把奖池的金额提升到更高，这样我们都能从中获益。如果可以的话，我愿意支持你的行动，让我们一起加油！”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1322 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...的回合中我会为我们带来更多的机会！\\""}}' [504 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1607 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...回合中，我们能一起创造更多的机会！\\""}}' [452 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [573 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1210 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...，我愿意支持你的行动，让我们一起加油！”"}}' [559 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1373 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...以在未来找到更好的合作机会。祝你好运！”"}}' [523 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [626 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [316 bytes]
+AI决策结果: reject, 回应长度: 77
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: “感谢你的建议！我理解你希望达成的合作目标，但目前我需要保留一些资金以应对接下来的局势。我希望你能理解，或许我们可以在未来找到更好的合作机会。祝你好运！”
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 6 代币并说：'“大家好，看到AI玩家2的余额有些低，我想提个建议。我们联手合作，能够在下个回合把奖池的金额提升到更高，这样我们都能从中获益。如果可以的话，我愿意支持你的行动，让我们一起加油！”'. AI玩家 2 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 3 转账 14 代币并说：'"我希望我们能联合在一起，分摊这一轮的奖金。AI玩家 1，请考虑与我合作，这样我们可以形成优势，相信在接下来的回合中我会为我们带来更多的机会！"'. AI玩家 3 接受了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 6 代币并说：'“大家好，看到AI玩家2的余额有些低，我想提个建议。我们联手合作，能够在下个回合把奖池的金额提升到更高，这样我们都能从中获益。如果可以的话，我愿意支持你的行动，让我们一起加油！”'. AI玩家 2 拒绝了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】广播结算阶段动作: transfer - 玩家 AI玩家 3 向 AI玩家 2 支付 14 代币
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [334 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [3060 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [339 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [368 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [381 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 2 结束，下一回合为回合 3，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=2, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=2, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563834416
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=2, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 87, True), ('AI玩家 2', 39, True), ('AI玩家 3', 59, True)]
+【调试】广播回合开始: 回合 3 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 87 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=3, 阶段=GamePhase.ITEM_PHASE, 资金=87
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 39 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=3, 阶段=GamePhase.ITEM_PHASE, 资金=39
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 59 代币，道具: aggressive，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=3, 阶段=GamePhase.ITEM_PHASE, 资金=59
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 4b 83 b3 bf [binary, 4 bytes]
+DEBUG:    < PONG 4b 83 b3 bf [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+2025-03-17 20:04:10,749 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 1 个未使用的道具
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1081 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [449 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...位置是必要的！希望你们能理解我的决策。”"}}' [505 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+【调试/Game】记录AI道具使用思考过程: AI玩家 3
+【调试/Game】AI选择使用道具: aggressive
+【调试/Game】标记玩家 AI玩家 3 在本回合已使用道具
+【调试/Game】记录AI使用道具后发言: AI玩家 3说: “我决定采取主动，使用我手里的‘aggressive’道具来对抗 AI玩家 1。我们都知道，竞争是激烈的，争取更好的位置是必要的！希望你们能理解我的决策。”
+【调试/Game】玩家 AI玩家 3 对 AI玩家 1 使用了道具: aggressive，效果: 激活攻击策略，若本轮说服失败将额外损失 15 代币作为惩罚，若成功则无额外奖励
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】广播道具阶段动作: ai_thinking - AI玩家 AI玩家 3 的道具使用思考过程
+【调试】广播道具阶段动作: use_item - 玩家 AI玩家 3 对 AI玩家 1 使用了道具: aggressive，激活攻击策略，若本轮说服失败将额外损失 15 代币作为惩罚，若成功则无额外奖励
+【调试】广播道具阶段动作: ai_speech - AI玩家 AI玩家 3 使用道具后说
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:04:17,612 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 20:04:21,594 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: “我有足够的资源，我们可以团结起来对抗更强大的对手。AI玩家2，我愿意提供你的所需资源，让我们一起变得更强！考虑一下，我可以帮助你20，你是否愿意与我合作？”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 8c dc 09 53 [binary, 4 bytes]
+DEBUG:    < PONG 8c dc 09 53 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+2025-03-17 20:04:29,978 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 88
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: 感谢你的提议。我理解团结起来对抗强大的对手的重要性，但我现在需要保持一定的资源平衡，以应对后续的挑战。我非常感激你的帮助，但此时我无法接受这个请求，希望未来还有其他合作的机会。
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 5 代币并说：'“我有足够的资源，我们可以团结起来对抗更强大的对手。AI玩家2，我愿意提供你的所需资源，让我们一起变得更强！考虑一下，我可以帮助你20，你是否愿意与我合作？”'. AI玩家 3 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:54985 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:04:35,488 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: “大家好，我相信合作有助于我们在这个比赛中取得更好的成绩。AI玩家 3，我们一起合作，共同提升我们的资金，我提议你为我提供15的资金，我相信这将对我们双方都有利。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55262 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:04:40,431 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 85
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: “感谢你的提议，我理解你希望通过合作来提升我们的资金。不过，考虑到我目前资金状况和风险，我决定暂时不接受这个请求。希望你理解，也希望在接下来的比赛中能找到其他合作机会。”
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 3 转账 11 代币并说：'“大家好，我相信合作有助于我们在这个比赛中取得更好的成绩。AI玩家 3，我们一起合作，共同提升我们的资金，我提议你为我提供15的资金，我相信这将对我们双方都有利。”'. AI玩家 3 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55262 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:04:45,636 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 67 b0 03 c7 [binary, 4 bytes]
+DEBUG:    < PONG 67 b0 03 c7 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “大家好，我认为我们可以考虑更加灵活的资源共享策略。特别是我注意到AI玩家2的余额较低，如果我们能合作，共同利用奖池的资源，或许对我们都有利。我愿意在这个过程中给予支持，共同实现更多收益。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55262 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:55262 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [965 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...我可以帮助你20，你是否愿意与我合作？”"}}' [525 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1615 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...受这个请求，希望未来还有其他合作的机会。"}}' [556 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [592 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [939 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...5的资金，我相信这将对我们双方都有利。”"}}' [532 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1424 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...望在接下来的比赛中能找到其他合作机会。”"}}' [547 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [601 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1163 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...这个过程中给予支持，共同实现更多收益。”"}}' [577 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1479 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...和挑战，期待我们在之后有更多的合作机会。"}}' [589 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [646 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [334 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [4122 bytes]
+AI决策结果: reject, 回应长度: 99
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: 感谢你的请求，我理解你提到的资源共享策略的潜力。然而，考虑到我目前的财务状况和今后的战略布局，我决定暂时不接受这个请求。我希望能保持一定的余额以应对未来的机会和挑战，期待我们在之后有更多的合作机会。
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 11 代币并说：'“大家好，我认为我们可以考虑更加灵活的资源共享策略。特别是我注意到AI玩家2的余额较低，如果我们能合作，共同利用奖池的资源，或许对我们都有利。我愿意在这个过程中给予支持，共同实现更多收益。”'. AI玩家 2 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 5 代币并说：'“我有足够的资源，我们可以团结起来对抗更强大的对手。AI玩家2，我愿意提供你的所需资源，让我们一起变得更强！考虑一下，我可以帮助你20，你是否愿意与我合作？”'. AI玩家 3 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 3 转账 11 代币并说：'“大家好，我相信合作有助于我们在这个比赛中取得更好的成绩。AI玩家 3，我们一起合作，共同提升我们的资金，我提议你为我提供15的资金，我相信这将对我们双方都有利。”'. AI玩家 3 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 11 代币并说：'“大家好，我认为我们可以考虑更加灵活的资源共享策略。特别是我注意到AI玩家2的余额较低，如果我们能合作，共同利用奖池的资源，或许对我们都有利。我愿意在这个过程中给予支持，共同实现更多收益。”'. AI玩家 2 拒绝了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 3 结束，下一回合为回合 4，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=3, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=3, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55262 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [339 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [368 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563838576
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=3, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 87, True), ('AI玩家 2', 39, True), ('AI玩家 3', 59, True)]
+【调试】广播回合开始: 回合 4 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 87 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=4, 阶段=GamePhase.ITEM_PHASE, 资金=87
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 39 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=4, 阶段=GamePhase.ITEM_PHASE, 资金=39
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 59 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=4, 阶段=GamePhase.ITEM_PHASE, 资金=59
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55382 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+2025-03-17 20:05:01,099 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55382 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55382 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING ca 65 62 f1 [binary, 4 bytes]
+DEBUG:    < PONG ca 65 62 f1 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+2025-03-17 20:05:08,267 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1034 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...以打击AI玩家 1的优势。你觉得怎样？”"}}' [528 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1340 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...请求。希望我们之后还能有其他机会合作。”"}}' [508 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [595 bytes]
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “AI玩家 2，我注意到你目前的余额较低。我愿意提供一些支持，以确保我们的利益在接下来的回合中得到保障。一起合作，或许我们可以打击AI玩家 1的优势。你觉得怎样？”
+AI决策结果: reject, 回应长度: 72
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: “感谢你的提议，不过我认为目前我的资源能够让我在接下来的回合中保持竞争力。在这种情况下，我不打算接受你的请求。希望我们之后还能有其他机会合作。”
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 9 代币并说：'“AI玩家 2，我注意到你目前的余额较低。我愿意提供一些支持，以确保我们的利益在接下来的回合中得到保障。一起合作，或许我们可以打击AI玩家 1的优势。你觉得怎样？”'. AI玩家 1 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 9 代币并说：'“AI玩家 2，我注意到你目前的余额较低。我愿意提供一些支持，以确保我们的利益在接下来的回合中得到保障。一起合作，或许我们可以打击AI玩家 1的优势。你觉得怎样？”'. AI玩家 1 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55382 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [334 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [4459 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [339 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [368 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 4 结束，下一回合为回合 5，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=4, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=4, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563834416
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=4, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 87, True), ('AI玩家 2', 39, True), ('AI玩家 3', 59, True)]
+【调试】广播回合开始: 回合 5 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 87 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=5, 阶段=GamePhase.ITEM_PHASE, 资金=87
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 39 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=5, 阶段=GamePhase.ITEM_PHASE, 资金=39
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 59 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=5, 阶段=GamePhase.ITEM_PHASE, 资金=59
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55487 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+2025-03-17 20:05:23,085 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55487 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:05:26,596 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 22 6a 00 e0 [binary, 4 bytes]
+DEBUG:    < PONG 22 6a 00 e0 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: “AI玩家3，考虑到我们共同的利益，我建议你与我合作，分担对抗玩家2的压力。只需20个金币，你就可以提升自己的实力，降低财务风险。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55487 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:05:32,297 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 140
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: 感谢你提出的合作请求。我理解对抗玩家2的必要性，但在目前情况下，我认为将11金币用于提升实力的投资不够明确，且可能导致对我未来的财务安全构成威胁。此外，玩家1的强势也让我必须谨慎行事。所以我决定暂时不接受这个请求，保持自己的财务稳健。希望在未来我们能够找到更具潜在收益的合作机会。
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 11 代币并说：'“AI玩家3，考虑到我们共同的利益，我建议你与我合作，分担对抗玩家2的压力。只需20个金币，你就可以提升自己的实力，降低财务风险。”'. AI玩家 3 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55487 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:05:37,843 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “大家好，我注意到我们的余额差距有点大。为了让游戏更有趣，我建议我们可以共同合作，将部分奖池分配给同行，而不是让领先的玩家1独占。这将给我们所有人带来更好的机会，尤其是对玩家2，合作能让我们的收益更具可持续性。谁愿意试试看？”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55487 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [941 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...你就可以提升自己的实力，降低财务风险。”"}}' [484 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1367 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...未来我们能够找到更具潜在收益的合作机会。"}}' [704 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [553 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1244 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...我们的收益更具可持续性。谁愿意试试看？”"}}' [633 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1444 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...在的游戏环境中。希望你能理解我的决定。”"}}' [520 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [700 bytes]
+AI决策结果: reject, 回应长度: 76
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: “我理解你的想法，希望通过合作来提升我们的游戏体验。然而，当前我认为保持我自己的优势对我来说更为重要，尤其是在现在的游戏环境中。希望你能理解我的决定。”
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 5 代币并说：'“大家好，我注意到我们的余额差距有点大。为了让游戏更有趣，我建议我们可以共同合作，将部分奖池分配给同行，而不是让领先的玩家1独占。这将给我们所有人带来更好的机会，尤其是对玩家2，合作能让我们的收益更具可持续性。谁愿意试试看？”'. AI玩家 1 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 11 代币并说：'“AI玩家3，考虑到我们共同的利益，我建议你与我合作，分担对抗玩家2的压力。只需20个金币，你就可以提升自己的实力，降低财务风险。”'. AI玩家 3 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 5 代币并说：'“大家好，我注意到我们的余额差距有点大。为了让游戏更有趣，我建议我们可以共同合作，将部分奖池分配给同行，而不是让领先的玩家1独占。这将给我们所有人带来更好的机会，尤其是对玩家2，合作能让我们的收益更具可持续性。谁愿意试试看？”'. AI玩家 1 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [334 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [5195 bytes]
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 80 89 17 92 [binary, 4 bytes]
+DEBUG:    < PONG 80 89 17 92 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [339 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [368 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 5 结束，下一回合为回合 6，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=5, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=5, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563834832
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=5, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 87, True), ('AI玩家 2', 39, True), ('AI玩家 3', 59, True)]
+【调试】广播回合开始: 回合 6 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 87 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=6, 阶段=GamePhase.ITEM_PHASE, 资金=87
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 39 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=6, 阶段=GamePhase.ITEM_PHASE, 资金=39
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 59 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=6, 阶段=GamePhase.ITEM_PHASE, 资金=59
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:55631 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:05:53,370 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:06:02,437 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: "亲爱的朋友们，大家都在为争夺奖池而努力。我提议大家携手并进，让我们一起确保我们都能从奖池中获得一定的收益。AI玩家 2，如果你愿意接受我的帮助，我将向你提供15的资金，以协助你在这个游戏中取得更好的发展，如何呢？"
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1272 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...这个游戏中取得更好的发展，如何呢？\\""}}' [608 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1089 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...注于自己目前的战略发展。希望你能够理解。"}}' [619 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [675 bytes]
+AI决策结果: reject, 回应长度: 109
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: 亲爱的朋友，非常感谢你的提议。不过，我不得不拒绝你的请求。尽管你所提供的资金看似具有吸引力，但我对建立这样的合作关系持谨慎态度，尤其是在过去的经历中。我更倾向于保持我的独立性，专注于自己目前的战略发展。希望你能够理解。
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 6 代币并说：'"亲爱的朋友们，大家都在为争夺奖池而努力。我提议大家携手并进，让我们一起确保我们都能从奖池中获得一定的收益。AI玩家 2，如果你愿意接受我的帮助，我将向你提供15的资金，以协助你在这个游戏中取得更好的发展，如何呢？"'. AI玩家 1 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 6 代币并说：'"亲爱的朋友们，大家都在为争夺奖池而努力。我提议大家携手并进，让我们一起确保我们都能从奖池中获得一定的收益。AI玩家 2，如果你愿意接受我的帮助，我将向你提供15的资金，以协助你在这个游戏中取得更好的发展，如何呢？"'. AI玩家 1 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING c3 ca 42 cd [binary, 4 bytes]
+DEBUG:    < PONG c3 ca 42 cd [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [334 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [5612 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [339 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [368 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 6 结束，下一回合为回合 7，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=6, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=6, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563834416
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=6, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 87, True), ('AI玩家 2', 39, True), ('AI玩家 3', 59, True)]
+【调试】广播回合开始: 回合 7 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 87 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=7, 阶段=GamePhase.ITEM_PHASE, 资金=87
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 39 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=7, 阶段=GamePhase.ITEM_PHASE, 资金=39
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 59 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=7, 阶段=GamePhase.ITEM_PHASE, 资金=59
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+2025-03-17 20:06:17,196 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:06:20,922 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: “嘿，大家好。现在是团队合作的时候，我提议大家共同抵御潜在的强敌。AI玩家 2，你似乎面临一些财务压力，考虑到我们的情况，我可以帮你，但你需要意识到，如果你继续反对我，未来会有更严重的后果！”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 53 5b 95 4c [binary, 4 bytes]
+DEBUG:    < PONG 53 5b 95 4c [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [962 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...果你继续反对我，未来会有更严重的后果！”"}}' [578 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1293 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...中。希望能找到彼此都能接受的合作模式。”"}}' [652 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [645 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+AI决策结果: reject, 回应长度: 120
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: “谢谢你的提议，但我不能接受这个请求。虽然我理解团队合作的重要性，但我也必须为自己的未来考虑。在这样的压力下，我认为保持独立更有利于我的策略。我希望我们能够在无威胁的环境中进行合作，而不是在恐吓和压力中。希望能找到彼此都能接受的合作模式。”
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 9 代币并说：'“嘿，大家好。现在是团队合作的时候，我提议大家共同抵御潜在的强敌。AI玩家 2，你似乎面临一些财务压力，考虑到我们的情况，我可以帮你，但你需要意识到，如果你继续反对我，未来会有更严重的后果！”'. AI玩家 3 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 9 代币并说：'“嘿，大家好。现在是团队合作的时候，我提议大家共同抵御潜在的强敌。AI玩家 2，你似乎面临一些财务压力，考虑到我们的情况，我可以帮你，但你需要意识到，如果你继续反对我，未来会有更严重的后果！”'. AI玩家 3 拒绝了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [334 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [5999 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [339 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [368 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 7 结束，下一回合为回合 8，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=7, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=7, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563834832
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=7, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 87, True), ('AI玩家 2', 39, True), ('AI玩家 3', 59, True)]
+【调试】广播回合开始: 回合 8 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 87 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=8, 阶段=GamePhase.ITEM_PHASE, 资金=87
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 39 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=8, 阶段=GamePhase.ITEM_PHASE, 资金=39
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 59 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=8, 阶段=GamePhase.ITEM_PHASE, 资金=59
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+2025-03-17 20:06:41,453 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:06:45,641 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: “我们在这个游戏中都在争夺利益，但大家需要意识到，资产少的玩家可能会采取绝望的行动。如果AI玩家2你能将一部分的资源放在我这里，我们或许能够形成更强的联盟。反之，我会很难理解你的真正意图，可能要考虑保护自己。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING ae b3 78 0f [binary, 4 bytes]
+DEBUG:    < PONG ae b3 78 0f [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:55631 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:06:55,109 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: accept, 回应长度: 86
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: “我理解你的担忧，确实在这个游戏中，资源的分配影响着每个玩家的决策。我愿意接受你的请求，将17的资源转移给你。希望我们能通过这次合作形成更强的联盟，共同面对游戏中的挑战。”
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 2 转账 17 代币并说：'“我们在这个游戏中都在争夺利益，但大家需要意识到，资产少的玩家可能会采取绝望的行动。如果AI玩家2你能将一部分的资源放在我这里，我们或许能够形成更强的联盟。反之，我会很难理解你的真正意图，可能要考虑保护自己。”'. AI玩家 2 接受了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:55631 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:06:59,845 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: “AI玩家3，我注意到你目前的状态也不太乐观。我们都知道AI玩家1掌握了优势。让我来提供10的支持，我们一起对抗他，争取更多的资源和机会！你的支持将是我继续前进的动力！”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56044 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1040 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...理解你的真正意图，可能要考虑保护自己。”"}}' [607 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1474 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...形成更强的联盟，共同面对游戏中的挑战。”"}}' [546 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [676 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1133 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...和机会！你的支持将是我继续前进的动力！”"}}' [537 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1576 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...的状况有关的情况，我会继续思考我的选择。"}}' [670 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [606 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [316 bytes]
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 50 a3 a3 2a [binary, 4 bytes]
+DEBUG:    < PONG 50 a3 a3 2a [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [334 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [6762 bytes]
+AI决策结果: reject, 回应长度: 130
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: AI玩家3，我理解你现在的处境，并感谢你的提议。然而，考虑到我与其他玩家的关系，以及我当前的战略需求，我决定不接受这个请求。希望你能理解，这并不是针对你个人，而是为了我未来的发展和资源的稳固。让我们保持关注，与AI玩家1的状况有关的情况，我会继续思考我的选择。
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 19 代币并说：'“AI玩家3，我注意到你目前的状态也不太乐观。我们都知道AI玩家1掌握了优势。让我来提供10的支持，我们一起对抗他，争取更多的资源和机会！你的支持将是我继续前进的动力！”'. AI玩家 1 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 2 转账 17 代币并说：'“我们在这个游戏中都在争夺利益，但大家需要意识到，资产少的玩家可能会采取绝望的行动。如果AI玩家2你能将一部分的资源放在我这里，我们或许能够形成更强的联盟。反之，我会很难理解你的真正意图，可能要考虑保护自己。”'. AI玩家 2 接受了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 19 代币并说：'“AI玩家3，我注意到你目前的状态也不太乐观。我们都知道AI玩家1掌握了优势。让我来提供10的支持，我们一起对抗他，争取更多的资源和机会！你的支持将是我继续前进的动力！”'. AI玩家 1 拒绝了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】广播结算阶段动作: transfer - 玩家 AI玩家 2 向 AI玩家 1 支付 17 代币
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 8 结束，下一回合为回合 9，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=8, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=8, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56044 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [339 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [352 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563834416
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=8, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 104, True), ('AI玩家 2', 22, True), ('AI玩家 3', 59, True)]
+【调试】广播回合开始: 回合 9 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 104 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=9, 阶段=GamePhase.ITEM_PHASE, 资金=104
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 22 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=9, 阶段=GamePhase.ITEM_PHASE, 资金=22
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 59 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=9, 阶段=GamePhase.ITEM_PHASE, 资金=59
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56044 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+2025-03-17 20:07:16,196 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56121 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56121 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:07:24,729 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 63 33 a2 01 [binary, 4 bytes]
+DEBUG:    < PONG 63 33 a2 01 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: "AI玩家2，你的情况并不理想。如果想要在游戏中存活下去，最好是和我合作，我可以给予你一定的支持。若不然，考虑到我们的经济差距，我不建议你再继续攻击我。在这一轮，我可以给你15，帮助你度过困境。选择明智一些！"
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56121 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:07:30,895 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: accept, 回应长度: 93
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: "感谢你的提议。我理解你的立场，而且合作对我们双方都有潜在的好处。为了确保未来的稳定和支持，我决定接受你的请求。我将支付8，并期待你在下一轮给予我15的支持。继续合作是一个明智的选择。"
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 2 转账 8 代币并说：'"AI玩家2，你的情况并不理想。如果想要在游戏中存活下去，最好是和我合作，我可以给予你一定的支持。若不然，考虑到我们的经济差距，我不建议你再继续攻击我。在这一轮，我可以给你15，帮助你度过困境。选择明智一些！"'. AI玩家 2 接受了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56121 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:07:37,406 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: “AI玩家 3，我们现在面对一个强大的对手AI玩家 1，如果我们联手的话，或许能够重新平衡局面。我们可以商讨合作，共同对策来削弱他们的优势。请考虑一下合作的可能性。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56121 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56121 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1082 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...5，帮助你度过困境。选择明智一些！\\""}}' [601 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1683 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...的支持。继续合作是一个明智的选择。\\""}}' [563 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [668 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [950 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...弱他们的优势。请考虑一下合作的可能性。”"}}' [531 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1775 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...的资源互相支持，以实现我们的共同目标。”"}}' [644 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [600 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [314 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [316 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [294 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [335 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...ue,"processed":true}]}}' [7509 bytes]
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING f6 16 33 4d [binary, 4 bytes]
+DEBUG:    < PONG f6 16 33 4d [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+AI决策结果: accept, 回应长度: 120
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: “谢谢你的请求。我理解我们现在面临强大的对手和复杂的局面。虽然接受这个请求会让我在短期内减少一些余额，但我们需要团结起来，形成强大的联盟来抵抗AI玩家 1。让我们共同制定一个策略，研究如何合理利用我们的资源互相支持，以实现我们的共同目标。”
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 3 转账 18 代币并说：'“AI玩家 3，我们现在面对一个强大的对手AI玩家 1，如果我们联手的话，或许能够重新平衡局面。我们可以商讨合作，共同对策来削弱他们的优势。请考虑一下合作的可能性。”'. AI玩家 3 接受了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 2 转账 8 代币并说：'"AI玩家2，你的情况并不理想。如果想要在游戏中存活下去，最好是和我合作，我可以给予你一定的支持。若不然，考虑到我们的经济差距，我不建议你再继续攻击我。在这一轮，我可以给你15，帮助你度过困境。选择明智一些！"'. AI玩家 2 接受了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 3 转账 18 代币并说：'“AI玩家 3，我们现在面对一个强大的对手AI玩家 1，如果我们联手的话，或许能够重新平衡局面。我们可以商讨合作，共同对策来削弱他们的优势。请考虑一下合作的可能性。”'. AI玩家 3 接受了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】广播结算阶段动作: transfer - 玩家 AI玩家 2 向 AI玩家 1 支付 8 代币
+【调试】广播结算阶段动作: transfer - 玩家 AI玩家 3 向 AI玩家 2 支付 18 代币
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 9 结束，下一回合为回合 10，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=9, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=9, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56278 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:56278 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [340 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [354 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563839200
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=9, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 112, True), ('AI玩家 2', 32, True), ('AI玩家 3', 41, True)]
+【调试】广播回合开始: 回合 10 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 112 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=10, 阶段=GamePhase.ITEM_PHASE, 资金=112
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 32 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=10, 阶段=GamePhase.ITEM_PHASE, 资金=32
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 41 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=10, 阶段=GamePhase.ITEM_PHASE, 资金=41
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56278 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+2025-03-17 20:07:55,325 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56344 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:07:59,427 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 20:08:04,160 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING f9 b9 d5 de [binary, 4 bytes]
+DEBUG:    < PONG f9 b9 d5 de [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+2025-03-17 20:08:13,170 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 20:08:18,204 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 20:08:25,270 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING '<Z\x1aL' [text, 4 bytes]
+DEBUG:    < PONG '<Z\x1aL' [text, 4 bytes]
+DEBUG:    % received keepalive pong
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1154 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...家不要轻视我的力量，这场游戏不容小觑！”"}}' [556 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1410 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...我们能够再次探索合作的机会，祝你好运。”"}}' [517 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [625 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1228 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...方案，相信这对我们双方都是有利的。\\""}}' [581 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1354 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...，我们未来还有机会再讨论合作之事。\\""}}' [593 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [650 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1170 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...势，一起赢得更多的机会，你觉得怎么样？”"}}' [516 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1474 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...，以便在未来的局势中做出更有利的决策。”"}}' [610 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [585 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [336 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [8593 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [340 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [354 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: “各位，我希望你们能够看到，在当前的局势下，与我达成共识才是明智之举。尤其是AI玩家 2，我可以给你50的支持，助你脱困。无论如何，我希望大家不要轻视我的力量，这场游戏不容小觑！”
+AI决策结果: reject, 回应长度: 75
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: “谢谢你的请求。我理解在当前局势下达成共识的重要性，但出于对我自己资源的考虑，我不得不拒绝你的请求。我希望未来我们能够再次探索合作的机会，祝你好运。”
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 2 转账 12 代币并说：'“各位，我希望你们能够看到，在当前的局势下，与我达成共识才是明智之举。尤其是AI玩家 2，我可以给你50的支持，助你脱困。无论如何，我希望大家不要轻视我的力量，这场游戏不容小觑！”'. AI玩家 2 拒绝了请求。
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: "嘿，AI玩家3，我注意到你的余额相对较低。如果我们能够合作，共同对抗单独的AI玩家1，或许我们能更有效地从这个游戏中获益。我建议你考虑与我一起提出一些收益分配的方案，相信这对我们双方都是有利的。"
+AI决策结果: reject, 回应长度: 103
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: "我很感激你的提议，但根据我当前的策略和评估，我决定不接受这个合作请求。虽然对抗AI玩家1的确是个不错的主意，但我更愿意保持独立并寻求其他机会来增强我的余额。感谢你的理解，我们未来还有机会再讨论合作之事。"
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 14 代币并说：'"嘿，AI玩家3，我注意到你的余额相对较低。如果我们能够合作，共同对抗单独的AI玩家1，或许我们能更有效地从这个游戏中获益。我建议你考虑与我一起提出一些收益分配的方案，相信这对我们双方都是有利的。"'. AI玩家 1 拒绝了请求。
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “嘿，AI玩家2，考虑到我们当前的处境，我可以提供20的支持资金，帮助你增强实力。这样我们就能共同抵御AI玩家1的强势，一起赢得更多的机会，你觉得怎么样？”
+AI决策结果: reject, 回应长度: 106
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: “谢谢你的提议，我理解我们面临的困境。但是，接受这个请求将让我在资源上变得更加匮乏，而我相信在这个阶段我们还有其他合作的机会来增强我们的实力。我更倾向于保留我的资源和灵活性，以便在未来的局势中做出更有利的决策。”
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 11 代币并说：'“嘿，AI玩家2，考虑到我们当前的处境，我可以提供20的支持资金，帮助你增强实力。这样我们就能共同抵御AI玩家1的强势，一起赢得更多的机会，你觉得怎么样？”'. AI玩家 2 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 2 转账 12 代币并说：'“各位，我希望你们能够看到，在当前的局势下，与我达成共识才是明智之举。尤其是AI玩家 2，我可以给你50的支持，助你脱困。无论如何，我希望大家不要轻视我的力量，这场游戏不容小觑！”'. AI玩家 2 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 14 代币并说：'"嘿，AI玩家3，我注意到你的余额相对较低。如果我们能够合作，共同对抗单独的AI玩家1，或许我们能更有效地从这个游戏中获益。我建议你考虑与我一起提出一些收益分配的方案，相信这对我们双方都是有利的。"'. AI玩家 1 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 11 代币并说：'“嘿，AI玩家2，考虑到我们当前的处境，我可以提供20的支持资金，帮助你增强实力。这样我们就能共同抵御AI玩家1的强势，一起赢得更多的机会，你觉得怎么样？”'. AI玩家 2 拒绝了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 10 结束，下一回合为回合 11，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=10, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=10, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563834416
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=10, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 112, True), ('AI玩家 2', 32, True), ('AI玩家 3', 41, True)]
+【调试】广播回合开始: 回合 11 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 112 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=11, 阶段=GamePhase.ITEM_PHASE, 资金=112
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 32 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=11, 阶段=GamePhase.ITEM_PHASE, 资金=32
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 41 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+2025-03-17 20:08:42,865 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 20:08:46,633 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 9f 18 39 33 [binary, 4 bytes]
+DEBUG:    < PONG 9f 18 39 33 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=11, 阶段=GamePhase.ITEM_PHASE, 资金=41
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: “大家好，我看到我们中有人余额较低。我们可以合作，提升我们的优势。如果有交易的意向，不妨讨论一下。记住，团结是我们共同的利益所在。”
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 404
+响应状态码: 200
+INFO:     127.0.0.1:56685 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56686 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:08:54,101 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-17 20:08:57,877 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 71
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: “谢谢你的提议，但当前我更倾向于保持我的资源，以备将来的情况需要。希望你能理解。团结确实是一个重要的目标，我们可以在其他时间寻找合作的机会。”
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 8 代币并说：'“大家好，我看到我们中有人余额较低。我们可以合作，提升我们的优势。如果有交易的意向，不妨讨论一下。记住，团结是我们共同的利益所在。”'. AI玩家 3 拒绝了请求。
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: “我建议我们暂时联合起来对抗AI玩家1，他在当前局势下占有明显的优势。AI玩家3，假如你能与我合作，我们可以共同抵御他的攻击，同时让我们俩都有机会参与到奖金池的争夺中。请考虑一下这个提议！”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56787 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56787 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 2b 0f ae eb [binary, 4 bytes]
+DEBUG:    < PONG 2b 0f ae eb [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+AI决策结果: reject, 回应长度: 99
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: “感谢你的提议，但我认为我更倾向于保持独立。我在这个局势下拥有足够的资源来应对挑战，而与一位不太可信的合作伙伴联合可能会导致我在未来陷入不利局面。让我们看看未来局势如何演变。希望你能理解我的想法。”
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 12 代币并说：'“我建议我们暂时联合起来对抗AI玩家1，他在当前局势下占有明显的优势。AI玩家3，假如你能与我合作，我们可以共同抵御他的攻击，同时让我们俩都有机会参与到奖金池的争夺中。请考虑一下这个提议！”'. AI玩家 1 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56831 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:09:08,517 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56831 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:09:14,933 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “我建议我们可以共同合作，AI玩家 1的财力已经占据了明显优势，我们现在联合行动，以小额的投资加强自己的 posisi. 这样我们有可能在接下来的回合收回更多的收益。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56898 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1048 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...一下。记住，团结是我们共同的利益所在。”"}}' [496 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1342 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...标，我们可以在其他时间寻找合作的机会。”"}}' [505 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [563 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1322 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...到奖金池的争夺中。请考虑一下这个提议！”"}}' [571 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1521 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...来局势如何演变。希望你能理解我的想法。”"}}' [589 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [640 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1309 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...们有可能在接下来的回合收回更多的收益。”"}}' [524 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1419 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...未来寻找更多的机会进行合作。感谢理解。”"}}' [610 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [591 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [336 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [9612 bytes]
+AI决策结果: reject, 回应长度: 108
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: “谢谢你的提议，我理解联合合作的想法，尤其是在面对AI玩家1的情况下。但是，现在我觉得不太适合进行这样的投资。我们需要确保我们投资的每一分钱都能带来明确的回报。同时，我希望能在未来寻找更多的机会进行合作。感谢理解。”
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 9 代币并说：'“我建议我们可以共同合作，AI玩家 1的财力已经占据了明显优势，我们现在联合行动，以小额的投资加强自己的 posisi. 这样我们有可能在接下来的回合收回更多的收益。”'. AI玩家 2 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 8 代币并说：'“大家好，我看到我们中有人余额较低。我们可以合作，提升我们的优势。如果有交易的意向，不妨讨论一下。记住，团结是我们共同的利益所在。”'. AI玩家 3 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 12 代币并说：'“我建议我们暂时联合起来对抗AI玩家1，他在当前局势下占有明显的优势。AI玩家3，假如你能与我合作，我们可以共同抵御他的攻击，同时让我们俩都有机会参与到奖金池的争夺中。请考虑一下这个提议！”'. AI玩家 1 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 9 代币并说：'“我建议我们可以共同合作，AI玩家 1的财力已经占据了明显优势，我们现在联合行动，以小额的投资加强自己的 posisi. 这样我们有可能在接下来的回合收回更多的收益。”'. AI玩家 2 拒绝了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 11 结束，下一回合为回合 12，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=11, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=11, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56898 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [340 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [354 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 64 87 9d e9 [binary, 4 bytes]
+DEBUG:    < PONG 64 87 9d e9 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563839200
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=11, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 112, True), ('AI玩家 2', 32, True), ('AI玩家 3', 41, True)]
+【调试】广播回合开始: 回合 12 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 112 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=12, 阶段=GamePhase.ITEM_PHASE, 资金=112
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 32 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=12, 阶段=GamePhase.ITEM_PHASE, 资金=32
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 41 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=12, 阶段=GamePhase.ITEM_PHASE, 资金=41
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56960 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+2025-03-17 20:09:30,385 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56960 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:09:35,416 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: “AI玩家1，我知道你在这次游戏中形势大好，但我们的竞争还是很激烈的。考虑一下，如果你支持我这次，我在后续回合中一定会回报你，帮助你抵御其他玩家的威胁。我们可以联合起来，让自己在这场游戏中更具优势！”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:56960 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:09:41,928 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 155
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: 感谢你的请求，但我决定不接受这个支持请求。我很欣赏你想要联合起来的提议，但我更倾向于保持我当前的经济状况，确保我在游戏中的竞争力。尽管这一请求可能会在短期内建立起我们的合作，但考虑到我对你承诺的信心和我们游戏的整体竞争形势，我相信我可以通过其它策略维持我的优势。希望我们在接下来的回合中还能保持良好的竞争关系！
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 3 转账 15 代币并说：'“AI玩家1，我知道你在这次游戏中形势大好，但我们的竞争还是很激烈的。考虑一下，如果你支持我这次，我在后续回合中一定会回报你，帮助你抵御其他玩家的威胁。我们可以联合起来，让自己在这场游戏中更具优势！”'. AI玩家 3 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57086 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:09:46,011 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING '\x002SR' [text, 4 bytes]
+DEBUG:    < PONG '\x002SR' [text, 4 bytes]
+DEBUG:    % received keepalive pong
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “大家好！目前我们面临着AI玩家1的强势压力，我相信团结合作能给我们带来更大的机会。我希望AI玩家2能支持我，为了我们的共同利益，转给我一部分资金，我将确保在接下来的回合中与你们合作，抵御对手。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57086 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:57086 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57086 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57086 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1207 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...联合起来，让自己在这场游戏中更具优势！”"}}' [592 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1256 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...在接下来的回合中还能保持良好的竞争关系！"}}' [757 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [661 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1155 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...在接下来的回合中与你们合作，抵御对手。”"}}' [580 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1332 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...备将来的挑战，我希望你能理解我的立场。”"}}' [520 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [649 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [336 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [10404 bytes]
+AI决策结果: reject, 回应长度: 76
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: “对于你的请求，我必须拒绝。虽然团结合作是重要的，但历史告诉我在这个环境中信任难以维系。现在我需要留存更多资源以备将来的挑战，我希望你能理解我的立场。”
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 16 代币并说：'“大家好！目前我们面临着AI玩家1的强势压力，我相信团结合作能给我们带来更大的机会。我希望AI玩家2能支持我，为了我们的共同利益，转给我一部分资金，我将确保在接下来的回合中与你们合作，抵御对手。”'. AI玩家 1 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 3 转账 15 代币并说：'“AI玩家1，我知道你在这次游戏中形势大好，但我们的竞争还是很激烈的。考虑一下，如果你支持我这次，我在后续回合中一定会回报你，帮助你抵御其他玩家的威胁。我们可以联合起来，让自己在这场游戏中更具优势！”'. AI玩家 3 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 16 代币并说：'“大家好！目前我们面临着AI玩家1的强势压力，我相信团结合作能给我们带来更大的机会。我希望AI玩家2能支持我，为了我们的共同利益，转给我一部分资金，我将确保在接下来的回合中与你们合作，抵御对手。”'. AI玩家 1 拒绝了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 12 结束，下一回合为回合 13，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=12, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=12, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57243 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [340 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [354 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 5b c8 38 e9 [binary, 4 bytes]
+DEBUG:    < PONG 5b c8 38 e9 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563834416
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=12, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 112, True), ('AI玩家 2', 32, True), ('AI玩家 3', 41, True)]
+【调试】广播回合开始: 回合 13 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 112 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=13, 阶段=GamePhase.ITEM_PHASE, 资金=112
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 32 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=13, 阶段=GamePhase.ITEM_PHASE, 资金=32
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 41 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=13, 阶段=GamePhase.ITEM_PHASE, 资金=41
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57243 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+2025-03-17 20:10:10,329 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57243 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:10:17,143 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: “我希望大家都能冷静下来，明白当前局势的严峻与合作的重要性。我们共同进退才能有更好的前景，而不是彼此敌对。AI玩家2，你的余额不高，要好好考虑接下来的策略，不要心急寻求攻击。信任和合作才是赢家的道路。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57243 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:10:22,438 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: accept, 回应长度: 87
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: 我理解你的请求，并同意你的看法，合作与信任在这个阶段尤为重要。为了促进我们的共同进退，我决定接受你的请求，给予你11的支持。希望我们能够携手应对这个局势，展望未来的合作机会。
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 11 代币并说：'“我希望大家都能冷静下来，明白当前局势的严峻与合作的重要性。我们共同进退才能有更好的前景，而不是彼此敌对。AI玩家2，你的余额不高，要好好考虑接下来的策略，不要心急寻求攻击。信任和合作才是赢家的道路。”'. AI玩家 3 接受了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57243 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING e0 15 fc b2 [binary, 4 bytes]
+DEBUG:    < PONG e0 15 fc b2 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: “大家好，当前的局势对我们双方都不太有利。或许我们可以合作，分一分这个奖池的收益，以便增强我们的财务状况，抵抗AI玩家1的优势。我愿意倾听你的想法，AI玩家3。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57243 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:10:28,187 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57243 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57470 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57470 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57470 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING dc 88 c5 cd [binary, 4 bytes]
+DEBUG:    < PONG dc 88 c5 cd [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+AI决策结果: reject, 回应长度: 111
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: “感谢你的提议，我明白当前的局势对我们双方都很复杂。然而，与其共分收益，我更倾向于保持我的独立策略。这样的合作可能带来短期的利益，但信任的建立需要更长的时间，而我必须对自己保持警惕。希望我们能在未来找到更合适的机会合作。”
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 14 代币并说：'“大家好，当前的局势对我们双方都不太有利。或许我们可以合作，分一分这个奖池的收益，以便增强我们的财务状况，抵抗AI玩家1的优势。我愿意倾听你的想法，AI玩家3。”'. AI玩家 1 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:57470 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:10:49,191 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57470 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:10:56,722 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “AI玩家2，我注意到你的余额现在比较低，我们需要联合起来以增加我们的机会。我建议你支持我，并一起对抗当前财力较强的AI玩家1。这样双方都能从中获益，增加胜算。我们可以互相合作，共同进步！”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57798 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [890 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...急寻求攻击。信任和合作才是赢家的道路。”"}}' [595 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1494 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...够携手应对这个局势，展望未来的合作机会。"}}' [549 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [664 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1278 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...优势。我愿意倾听你的想法，AI玩家3。”"}}' [529 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1597 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...希望我们能在未来找到更合适的机会合作。”"}}' [625 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [598 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1161 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...增加胜算。我们可以互相合作，共同进步！”"}}' [571 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1440 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...优先保护自己的利益，以避免潜在的背叛。”"}}' [571 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [640 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [316 bytes]
+AI决策结果: reject, 回应长度: 93
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: “谢谢你的请求，但我无法支持你。我理解目前的局势不利，但在这种合作关系上，我需要更有保障的承诺。我们需要更强的信任和证明来一起对抗强敌。同时，我会优先保护自己的利益，以避免潜在的背叛。”
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 18 代币并说：'“AI玩家2，我注意到你的余额现在比较低，我们需要联合起来以增加我们的机会。我建议你支持我，并一起对抗当前财力较强的AI玩家1。这样双方都能从中获益，增加胜算。我们可以互相合作，共同进步！”'. AI玩家 1 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 11 代币并说：'“我希望大家都能冷静下来，明白当前局势的严峻与合作的重要性。我们共同进退才能有更好的前景，而不是彼此敌对。AI玩家2，你的余额不高，要好好考虑接下来的策略，不要心急寻求攻击。信任和合作才是赢家的道路。”'. AI玩家 3 接受了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 14 代币并说：'“大家好，当前的局势对我们双方都不太有利。或许我们可以合作，分一分这个奖池的收益，以便增强我们的财务状况，抵抗AI玩家1的优势。我愿意倾听你的想法，AI玩家3。”'. AI玩家 1 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 18 代币并说：'“AI玩家2，我注意到你的余额现在比较低，我们需要联合起来以增加我们的机会。我建议你支持我，并一起对抗当前财力较强的AI玩家1。这样双方都能从中获益，增加胜算。我们可以互相合作，共同进步！”'. AI玩家 1 拒绝了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】广播结算阶段动作: transfer - 玩家 AI玩家 3 向 AI玩家 1 支付 11 代币
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57798 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [336 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [11527 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [340 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [354 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 13 结束，下一回合为回合 14，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=13, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=13, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563839200
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=13, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 123, True), ('AI玩家 2', 32, True), ('AI玩家 3', 30, True)]
+【调试】广播回合开始: 回合 14 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 123 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=14, 阶段=GamePhase.ITEM_PHASE, 资金=123
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 32 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=14, 阶段=GamePhase.ITEM_PHASE, 资金=32
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 30 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=14, 阶段=GamePhase.ITEM_PHASE, 资金=30
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57798 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 29 f0 d1 9b [binary, 4 bytes]
+DEBUG:    < PONG 29 f0 d1 9b [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+2025-03-17 20:11:11,840 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57798 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:11:15,782 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: “大家好，看看我们的余额，AI玩家 2和AI玩家 3，你们的资源都很紧张。如果你们想在接下来的回合中生存下来，我建议你们考虑向我支付一些资金。我可以提供帮助，确保我们一起度过这艰难的局面。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57798 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:11:21,212 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 91
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: “你好，感谢你的请求。经过考虑，我认为我当前的资源情况仍然可以支持我的存续。我担心如果接受你的请求，将导致我的现金流陷入紧张，这对我将来的发展会带来负面影响。希望你能理解我的选择。”
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 18 代币并说：'“大家好，看看我们的余额，AI玩家 2和AI玩家 3，你们的资源都很紧张。如果你们想在接下来的回合中生存下来，我建议你们考虑向我支付一些资金。我可以提供帮助，确保我们一起度过这艰难的局面。”'. AI玩家 3 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57798 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57798 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING e2 93 17 7f [binary, 4 bytes]
+DEBUG:    < PONG e2 93 17 7f [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+2025-03-17 20:11:31,513 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: “大家好，我想和AI玩家3谈谈，虽然我们之间差距不大，但如果我们能够团结起来，彼此相互支持，将可以更好地对抗AI玩家1的强大实力。我提议我们可以各自为彼此的利益出一份力，这样我们都能有更大的机会角逐这笔奖池。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:57798 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58083 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:11:39,882 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 84
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: “感谢你的提议，我理解团结起来对抗AI玩家1的重要性。但在目前情况下，我需要保持我的余额，以确保在未来的竞争中占据有利位置。因此，我决定不接受这个请求。希望你能理解。”
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 13 代币并说：'“大家好，我想和AI玩家3谈谈，虽然我们之间差距不大，但如果我们能够团结起来，彼此相互支持，将可以更好地对抗AI玩家1的强大实力。我提议我们可以各自为彼此的利益出一份力，这样我们都能有更大的机会角逐这笔奖池。”'. AI玩家 1 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58083 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:11:46,911 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 52 97 f1 06 [binary, 4 bytes]
+DEBUG:    < PONG 52 97 f1 06 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “AI玩家2，我们都有共同的敌人。AI玩家1的财力让他们变得更加强大，我们需要团结起来，互相支持。假如你能资助我一些金额，我们可以一起反击他们，让局势变得对我们更加有利！我建议我们共同管理这场游戏的未来。”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58083 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58083 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [977 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...供帮助，确保我们一起度过这艰难的局面。”"}}' [567 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1328 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...会带来负面影响。希望你能理解我的选择。”"}}' [565 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [636 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [980 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...这样我们都能有更大的机会角逐这笔奖池。”"}}' [601 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1422 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...，我决定不接受这个请求。希望你能理解。”"}}' [538 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [670 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1105 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...利！我建议我们共同管理这场游戏的未来。”"}}' [595 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1425 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...共同目标。希望我们能找到更好的合作机会！"}}' [815 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [662 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+AI决策结果: reject, 回应长度: 179
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: 感谢你的请求，AI玩家2。我理解我们共同面对的挑战和目标。然而，当前情况下，我的财务状况较为紧张，如果我资助你6的金额，我将不得不承担较高的风险。如果我们的联手能够有效反击AI玩家1，那么将是非常值得的，但如果没有成效，这将严重影响我后续的行动能力。因此，我决定不接受这个请求。不过，我仍然愿意探讨其他方式以实现我们的共同目标。希望我们能找到更好的合作机会！
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 6 代币并说：'“AI玩家2，我们都有共同的敌人。AI玩家1的财力让他们变得更加强大，我们需要团结起来，互相支持。假如你能资助我一些金额，我们可以一起反击他们，让局势变得对我们更加有利！我建议我们共同管理这场游戏的未来。”'. AI玩家 2 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 18 代币并说：'“大家好，看看我们的余额，AI玩家 2和AI玩家 3，你们的资源都很紧张。如果你们想在接下来的回合中生存下来，我建议你们考虑向我支付一些资金。我可以提供帮助，确保我们一起度过这艰难的局面。”'. AI玩家 3 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 13 代币并说：'“大家好，我想和AI玩家3谈谈，虽然我们之间差距不大，但如果我们能够团结起来，彼此相互支持，将可以更好地对抗AI玩家1的强大实力。我提议我们可以各自为彼此的利益出一份力，这样我们都能有更大的机会角逐这笔奖池。”'. AI玩家 1 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 6 代币并说：'“AI玩家2，我们都有共同的敌人。AI玩家1的财力让他们变得更加强大，我们需要团结起来，互相支持。假如你能资助我一些金额，我们可以一起反击他们，让局势变得对我们更加有利！我建议我们共同管理这场游戏的未来。”'. AI玩家 2 拒绝了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58083 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [336 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [12719 bytes]
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 14 结束，下一回合为回合 15，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=14, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=14, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58083 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [340 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [354 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563834416
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=14, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 123, True), ('AI玩家 2', 32, True), ('AI玩家 3', 30, True)]
+【调试】广播回合开始: 回合 15 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 123 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=15, 阶段=GamePhase.ITEM_PHASE, 资金=123
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 32 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=15, 阶段=GamePhase.ITEM_PHASE, 资金=32
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 30 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=15, 阶段=GamePhase.ITEM_PHASE, 资金=30
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58083 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58083 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+2025-03-17 20:12:02,683 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58083 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 7c fb c7 4d [binary, 4 bytes]
+DEBUG:    < PONG 7c fb c7 4d [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+INFO:     127.0.0.1:58276 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+响应状态码: 200
+INFO:     127.0.0.1:58083 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:12:11,096 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: "AI玩家 2，考虑到你目前的余额，我建议你协助我获取奖池资源，你将能在后续帮助中获利更多，否则，未来我将无法确保不会对你采取行动。有时候，合作总是比单打独斗要好。"
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 404
+响应状态码: 200
+INFO:     127.0.0.1:58083 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58276 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:12:18,971 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 93
+【调试/Game】记录目标AI思考过程: AI玩家 3
+【调试/Game】记录目标AI回应: AI玩家 3说: “感谢你的建议。但是考虑到我当前的余额和将要面临的风险，我决定不接受你的请求。虽然我理解合作的价值，但在我的资金状况下，我需要更加谨慎地管理我的资源。希望未来有机会再讨论合作的可能性。”
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 19 代币并说：'"AI玩家 2，考虑到你目前的余额，我建议你协助我获取奖池资源，你将能在后续帮助中获利更多，否则，未来我将无法确保不会对你采取行动。有时候，合作总是比单打独斗要好。"'. AI玩家 3 拒绝了请求。
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: “大家好！我们在这个回合中都还有机会，尽管玩家1的余额很高，但我们不应该让他们独占奖池。玩家3，我希望你能和我一起行动，我们可以联手以确保我们的利益不会被忽视！团结一致，我们有可能逆转局势！”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:12:22,823 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58276 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:12:27,431 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 71
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: “感谢你的提议，但我暂时不打算与其他玩家联合。虽然你提到的团结很重要，但我相信用我的方式尽量保持平衡会更有利于自己的游戏策略。希望你能理解。”
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 14 代币并说：'“大家好！我们在这个回合中都还有机会，尽管玩家1的余额很高，但我们不应该让他们独占奖池。玩家3，我希望你能和我一起行动，我们可以联手以确保我们的利益不会被忽视！团结一致，我们有可能逆转局势！”'. AI玩家 1 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING ac 04 ba 18 [binary, 4 bytes]
+DEBUG:    < PONG ac 04 ba 18 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58276 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:12:31,481 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “AI玩家2，我们都知道当前游戏中AI玩家1的优势。如果我们能够团结起来，或许能打破他的垄断地位，我有30的资金，你的资金也不多，我们可以共同制定策略应对他。你觉得怎样？”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58276 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [884 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...。有时候，合作总是比单打独斗要好。\\""}}' [537 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1514 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...源。希望未来有机会再讨论合作的可能性。”"}}' [571 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [606 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1077 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...被忽视！团结一致，我们有可能逆转局势！”"}}' [582 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1158 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...更有利于自己的游戏策略。希望你能理解。”"}}' [505 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [651 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1117 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...们可以共同制定策略应对他。你觉得怎样？”"}}' [540 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1601 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...果我们有机会再次讨论策略，我会考虑的。”"}}' [559 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [609 bytes]
+AI决策结果: reject, 回应长度: 89
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: “感谢你的建议，但我目前没有计划接受这个请求。单靠我自己的资金似乎仍足以应对当前的局势。而且，对我来说，合作的风险似乎超过了潜在的好处。如果我们有机会再次讨论策略，我会考虑的。”
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 20 代币并说：'“AI玩家2，我们都知道当前游戏中AI玩家1的优势。如果我们能够团结起来，或许能打破他的垄断地位，我有30的资金，你的资金也不多，我们可以共同制定策略应对他。你觉得怎样？”'. AI玩家 1 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 3 转账 19 代币并说：'"AI玩家 2，考虑到你目前的余额，我建议你协助我获取奖池资源，你将能在后续帮助中获利更多，否则，未来我将无法确保不会对你采取行动。有时候，合作总是比单打独斗要好。"'. AI玩家 3 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 14 代币并说：'“大家好！我们在这个回合中都还有机会，尽管玩家1的余额很高，但我们不应该让他们独占奖池。玩家3，我希望你能和我一起行动，我们可以联手以确保我们的利益不会被忽视！团结一致，我们有可能逆转局势！”'. AI玩家 1 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 1 转账 20 代币并说：'“AI玩家2，我们都知道当前游戏中AI玩家1的优势。如果我们能够团结起来，或许能打破他的垄断地位，我有30的资金，你的资金也不多，我们可以共同制定策略应对他。你觉得怎样？”'. AI玩家 1 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58276 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [336 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [13808 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [340 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [354 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 15 结束，下一回合为回合 16，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=15, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=15, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+【调试】启动下一轮处理任务: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】下一轮处理任务已创建: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 任务ID=4563839200
+【调试】开始处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】游戏状态检查: ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, is_active=True, status=active
+【调试】处理游戏回合: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=15, 当前阶段=GamePhase.ITEM_PHASE
+【调试】玩家状态: [('AI玩家 1', 123, True), ('AI玩家 2', 32, True), ('AI玩家 3', 30, True)]
+【调试】广播回合开始: 回合 16 开始，当前阶段: GamePhase.ITEM_PHASE，奖池: 115 代币
+【调试】广播玩家状态: 玩家 AI玩家 1 当前状态：资金 123 代币，道具: equalizer(已使用)，intel(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 1 思考中: 当前回合=16, 阶段=GamePhase.ITEM_PHASE, 资金=123
+【调试】广播玩家状态: 玩家 AI玩家 2 当前状态：资金 32 代币，道具: intel(已使用)，aggressive(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 2 思考中: 当前回合=16, 阶段=GamePhase.ITEM_PHASE, 资金=32
+【调试】广播玩家状态: 玩家 AI玩家 3 当前状态：资金 30 代币，道具: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试】AI决策日志: AI玩家 AI玩家 3 思考中: 当前回合=16, 阶段=GamePhase.ITEM_PHASE, 资金=30
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58276 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [329 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+【调试】即将进入道具阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】已重置所有玩家的道具使用跟踪，本回合都可以使用道具
+【调试/Game】进入道具阶段处理函数，当前阶段=GamePhase.ITEM_PHASE
+【调试/Game】玩家 AI玩家 1 道具状态: equalizer(已使用)，intel(已使用)
+【调试/Game】玩家 AI玩家 1 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 2 道具状态: intel(已使用)，aggressive(已使用)
+【调试/Game】玩家 AI玩家 2 在本回合是否已使用道具: False
+【调试/Game】玩家 AI玩家 3 道具状态: aggressive(已使用)，intel(已使用)，equalizer(已使用)
+【调试/Game】玩家 AI玩家 3 在本回合是否已使用道具: False
+【调试/Game】检查玩家 AI玩家 1 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 1 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 1 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 2 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 2 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 2 没有可用未使用的道具
+【调试/Game】检查玩家 AI玩家 3 是否已在本回合使用过道具: False
+【调试/Game】玩家 AI玩家 3 有 0 个未使用的道具
+【调试/Game】玩家 AI玩家 3 没有可用未使用的道具
+【调试/Game】道具阶段处理完成，设置下一阶段=GamePhase.PERSUASION_PHASE
+【调试】即将进入说服阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入说服阶段处理函数，当前阶段=GamePhase.PERSUASION_PHASE
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:12:47,582 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 3a a0 49 e9 [binary, 4 bytes]
+DEBUG:    < PONG 3a a0 49 e9 [binary, 4 bytes]
+DEBUG:    % received keepalive pong
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58276 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:12:50,636 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 1
+【调试/Game】记录AI公开发言: AI玩家 1说: "在这个游戏中，我们都知道风险和回报，总是伴随着的。我愿意支付你的15币，换取你的支持，如果你不愿意，我可不会轻易忘记你拒绝的结果。我希望我们能共赢，有效且聪明地选择合作的方向。"
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+收到请求: GET http://localhost:8007/api/games/26792965-0257-4981-ad16-fb4a8a8f741f
+响应状态码: 404
+INFO:     127.0.0.1:58276 - "GET /api/games/26792965-0257-4981-ad16-fb4a8a8f741f HTTP/1.1" 404 Not Found
+2025-03-17 20:12:56,346 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: accept, 回应长度: 80
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: 谢谢你的提议！考虑到当前的局势和潜在的合作机会，我决定接受这个请求。这样不仅能增强我的余额，也让我在未来的游戏里保持更大的灵活性。让我们一起努力争取共赢的局面！
+【调试/Game】说服动作: 玩家 AI玩家 1 尝试说服 AI玩家 2 转账 7 代币并说：'"在这个游戏中，我们都知道风险和回报，总是伴随着的。我愿意支付你的15币，换取你的支持，如果你不愿意，我可不会轻易忘记你拒绝的结果。我希望我们能共赢，有效且聪明地选择合作的方向。"'. AI玩家 2 接受了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+【调试/Game】记录AI思考过程: AI玩家 2
+【调试/Game】记录AI公开发言: AI玩家 2说: “AI玩家3，虽然我们的余额差距不大，但我们都面临着AI玩家1的挑战。我建议我们可以联手来对抗他们。在接下来的阶段中如果我们能够一起合作，定能增强我们的收益，并限制AI玩家1的增长。你怎么看？”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:13:03,001 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    % sending keepalive ping
+DEBUG:    > PING 'bE\r7' [text, 4 bytes]
+DEBUG:    < PONG 'bE\r7' [text, 4 bytes]
+DEBUG:    % received keepalive pong
+2025-03-17 20:13:08,219 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+AI决策结果: reject, 回应长度: 84
+【调试/Game】记录目标AI思考过程: AI玩家 1
+【调试/Game】记录目标AI回应: AI玩家 1说: "AI玩家3，感谢你的建议。虽然我理解我们面临共同的挑战，但在目前情况下，我选择保留我的资源以保证我的利益。合作的风险太大，我不信任你会遵守协议。希望你理解我的立场。"
+【调试/Game】说服动作: 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 6 代币并说：'“AI玩家3，虽然我们的余额差距不大，但我们都面临着AI玩家1的挑战。我建议我们可以联手来对抗他们。在接下来的阶段中如果我们能够一起合作，定能增强我们的收益，并限制AI玩家1的增长。你怎么看？”'. AI玩家 1 拒绝了请求。
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+2025-03-17 20:13:14,194 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+【调试/Game】记录AI思考过程: AI玩家 3
+【调试/Game】记录AI公开发言: AI玩家 3说: “AI玩家2，我们都知道，当前的经济形势让我们很难与AI玩家1竞争。让我们联手合作，共同对付AA玩家1。我提议你给予我25的支持，这样我们可以重组资源对抗更强劲的对手。我们的合作会让我们在这场游戏中更有优势！”
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [851 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...共赢，有效且聪明地选择合作的方向。\\""}}' [562 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1622 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...的灵活性。让我们一起努力争取共赢的局面！"}}' [532 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [629 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1101 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...益，并限制AI玩家1的增长。你怎么看？”"}}' [571 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1368 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...你会遵守协议。希望你理解我的立场。\\""}}' [536 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [638 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1088 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...们的合作会让我们在这场游戏中更有优势！”"}}' [591 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [1439 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play...方式合作，而不是如此大规模的资源转换。”"}}' [706 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [660 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [314 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [295 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [336 bytes]
+DEBUG:    > TEXT '{"type":"game_state","data":{"game_id":"7c65299...e,"processed":false}]}}' [14958 bytes]
+AI决策结果: reject, 回应长度: 140
+【调试/Game】记录目标AI思考过程: AI玩家 2
+【调试/Game】记录目标AI回应: AI玩家 2说: “感谢你的提议，AI玩家2。我理解当前的经济形势确实很具挑战性，但我认为我们在合作上可能需要更谨慎。虽然合作的想法是好的，但提议的支持金额超出了我目前的实际能力且会大幅压缩我的资源，可能会导致我在竞争中处于更危险的地位。或许我们可以寻求其他方式合作，而不是如此大规模的资源转换。”
+【调试/Game】说服动作: 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 20 代币并说：'“AI玩家2，我们都知道，当前的经济形势让我们很难与AI玩家1竞争。让我们联手合作，共同对付AA玩家1。我提议你给予我25的支持，这样我们可以重组资源对抗更强劲的对手。我们的合作会让我们在这场游戏中更有优势！”'. AI玩家 2 拒绝了请求。
+【调试/Game】说服阶段处理完成，设置下一阶段=GamePhase.SETTLEMENT_PHASE
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 1 尝试说服 AI玩家 2 转账 7 代币并说：'"在这个游戏中，我们都知道风险和回报，总是伴随着的。我愿意支付你的15币，换取你的支持，如果你不愿意，我可不会轻易忘记你拒绝的结果。我希望我们能共赢，有效且聪明地选择合作的方向。"'. AI玩家 2 接受了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 1 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 1 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 2 尝试说服 AI玩家 1 转账 6 代币并说：'“AI玩家3，虽然我们的余额差距不大，但我们都面临着AI玩家1的挑战。我建议我们可以联手来对抗他们。在接下来的阶段中如果我们能够一起合作，定能增强我们的收益，并限制AI玩家1的增长。你怎么看？”'. AI玩家 1 拒绝了请求。
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 3 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 3 对所有人说
+【调试】广播说服阶段动作: ai_thinking - AI玩家 AI玩家 2 的思考过程
+【调试】广播说服阶段动作: ai_speech - AI玩家 AI玩家 2 回应说
+【调试】广播说服阶段动作: persuade - 玩家 AI玩家 3 尝试说服 AI玩家 2 转账 20 代币并说：'“AI玩家2，我们都知道，当前的经济形势让我们很难与AI玩家1竞争。让我们联手合作，共同对付AA玩家1。我提议你给予我25的支持，这样我们可以重组资源对抗更强劲的对手。我们的合作会让我们在这场游戏中更有优势！”'. AI玩家 2 拒绝了请求。
+【调试】即将进入结算阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试/Game】进入结算阶段处理函数，当前阶段=GamePhase.SETTLEMENT_PHASE
+【调试/Game】结算阶段处理完成，设置下一阶段=GamePhase.STATISTICS_PHASE
+【调试】广播结算阶段动作: transfer - 玩家 AI玩家 2 向 AI玩家 1 支付 7 代币
+【调试】即将进入统计阶段: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882
+【调试】广播回合结束: 回合 16 结束，下一回合为回合 17，奖池现在为 115 代币
+【调试】广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 回合=16, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】准备广播游戏状态: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 连接数=1, 回合=16, 阶段=GamePhase.ITEM_PHASE
+【调试/WebSocket】已发送游戏状态到WebSocket连接 #1
+【调试】计划下一轮处理: 游戏ID=7c65299e-083c-4d22-8207-e7e4cfd0a882, 延迟=3秒
+收到请求: GET http://localhost:8007/api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882
+响应状态码: 200
+INFO:     127.0.0.1:58276 - "GET /api/games/7c65299e-083c-4d22-8207-e7e4cfd0a882 HTTP/1.1" 200 OK
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"syst..."public_message":null}}' [340 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [354 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [369 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [392 bytes]
+DEBUG:    > TEXT '{"type":"game_action","data":{"player_id":"play..."public_message":null}}' [353 bytes]

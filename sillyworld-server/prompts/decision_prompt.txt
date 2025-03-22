@@ -1,0 +1,18 @@
+
+Game Status:
+- Round: {round}
+- Phase: {phase} - {phase_description}
+- Prize Pool: {prize_pool} coins
+
+Your Status:
+- Name: {player_name}
+- Balance: {player_balance} coins
+- Items: {items}
+
+Other Players:
+{other_players}
+
+Available Actions:
+- {available_actions}
+
+Please make a decision based on the current game state and your strategic goals. Remember your objective is to end the game with the most coins.

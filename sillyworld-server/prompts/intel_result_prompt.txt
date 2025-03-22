@@ -1,0 +1,15 @@
+Intelligence Report: You've used an Intel Card!
+
+Target Information:
+Player: {target_name}
+Personality Traits: {target_personality}
+Current Balance: {target_balance} coins
+Owned Items: {target_items}
+
+This intelligence gives you a strategic advantage for upcoming rounds. Consider:
+- How this player's personality traits might influence their decision-making
+- Their financial position relative to others in the game
+- What items they have and how they might use them
+- How to craft persuasion attempts that align with their personality
+
+Use this intelligence wisely to refine your strategy, especially when selecting persuasion targets or defending against potential actions from this player. 

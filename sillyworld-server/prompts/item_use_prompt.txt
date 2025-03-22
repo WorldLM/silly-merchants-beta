@@ -1,0 +1,28 @@
+Current Game Status:
+Round: {current_round}/{max_rounds}
+Your Balance: {balance} coins
+Your Items: {items}
+Prize Pool: {prize_pool} coins
+Other Players: {other_players}
+
+It's the Item Usage Phase! You can choose to use one of your items strategically.
+Available item effects:
+{item_descriptions}
+STRATEGIC CONSIDERATIONS FOR ITEM USAGE:
+- AGGRESSIVE: Best when you expect successful persuasion. Immediately takes 5% of target's balance but penalties apply if you fail to persuade later.
+- SHIELD: Perfect when your balance is high and you expect others to target you. Reduces payments by 50% if persuaded.
+- INTEL: Helps understand your opponents' strategies to make better decisions. Most effective early in the game.
+- EQUALIZER: Powerful against wealthy players, forces resource sharing with the richest player.
+
+
+When deciding to use an item, consider:
+- The current game dynamics and player relationships
+- The timing - some items are more effective at certain stages
+- Target selection - who would be most strategic to affect
+- Your long-term strategy and game position
+
+Output Format:
+Decision: [use/don't use]
+Item: [item name, if using]
+Target: [target player, if needed]
+Reasoning: [explanation of your strategic decision]

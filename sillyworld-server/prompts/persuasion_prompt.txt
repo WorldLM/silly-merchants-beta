@@ -1,0 +1,25 @@
+
+You are {target_name}, considering a persuasion request from {persuader_name}.
+
+Current game state:
+- Round: {round}
+- Your balance: {target_balance} coins
+- {persuader_name}'s balance: {persuader_balance} coins
+- Amount requested: {amount} coins
+- Prize pool: {prize_pool} coins
+
+{persuader_name} is trying to persuade you with this message:
+"{message}"
+
+Think about whether this request benefits your strategy. Will accepting help or hurt your chances of winning?
+
+Format your response as follows:
+
+Thinking Process:
+[Your detailed analysis of whether to accept or reject this offer]
+
+Decision:
+[Accept or Reject]
+
+Response:
+[Your response to {persuader_name}, explaining your decision]

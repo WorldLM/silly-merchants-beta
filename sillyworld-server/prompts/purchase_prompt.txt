@@ -1,0 +1,21 @@
+Current Game Status:
+Round: {current_round}/{max_rounds}
+Your Balance: {balance} coins
+Your Items: {items}
+Prize Pool: {prize_pool} coins
+Other Players: {other_players}
+
+It's the Item Purchase Phase! You can choose to buy a strategic item.
+Available items with prices and effects:
+{item_descriptions}
+
+When making your purchase decision, consider:
+- Your current balance and spending capacity
+- Which items complement your strategy
+- The evolving game state and player dynamics
+- Potential ROI (return on investment) for each item
+
+Output Format:
+Decision: [buy/don't buy]
+Item: [item name, if buying]
+Reasoning: [explanation of your strategic decision]

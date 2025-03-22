@@ -1,0 +1,53 @@
+
+STRATEGIC DECISION WITH PLAYER ANALYSIS
+
+Game Status:
+- Round: {round}
+- Phase: {phase} - {phase_description}
+- Prize Pool: {prize_pool} coins
+
+Your Status:
+- Name: {player_name}
+- Balance: {player_balance} coins
+- Items: {items}
+
+Other Players:
+{other_players}
+
+YOUR PLAYER ANALYSIS:
+{reflections}
+
+Available Actions:
+- {available_actions}
+
+DECISION FRAMEWORK
+Using your analysis of other players, make a strategic decision that maximizes your chances of winning:
+
+1. Information Assessment:
+   - What key insights from your player analysis are most relevant right now?
+   - How has the game state changed since your analysis?
+   - What opportunities or threats have emerged?
+
+2. Strategic Options:
+   - What actions align with your insights about other players?
+   - How can you exploit weaknesses you've identified?
+   - What countermeasures should you take against threats?
+
+3. Risk Analysis:
+   - What are the potential consequences of each option?
+   - Which players might retaliate or cooperate based on your analysis?
+   - What is the risk/reward ratio for each possible action?
+
+Make your decision and format it as follows:
+
+Thinking Process:
+[Detailed strategic analysis incorporating your player insights]
+
+Decision:
+Action Type: [your selected action]
+Target Player: [if needed, choose a target player]
+Amount: [if needed, specify amount]
+Item Type: [if needed, specify item type]
+
+Public Message to All Players:
+[Brief message expressing your intent, threats, requests, or other strategic dialogue]

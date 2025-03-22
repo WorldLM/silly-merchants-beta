@@ -1,0 +1,21 @@
+Equalizer Card Activated!
+
+The wealth redistribution has occurred between you and another player:
+
+Target Player: {target_name}
+Target's Previous Balance: {target_before} coins
+Your Previous Balance: {player_before} coins
+
+After Equalization:
+Target's New Balance: {target_after} coins
+Your New Balance: {player_after} coins
+
+This equalization has {gained_lost} you {amount} coins.
+
+Strategic Considerations:
+- How does this change in balance affect your purchasing power?
+- Has this improved or weakened your position relative to other players?
+- Should you adjust your strategy for the upcoming rounds?
+- Has this created a potential ally or enemy?
+
+Plan your next moves carefully considering this shift in the game's economic balance. 
